@@ -60,10 +60,7 @@ export default function Home({
 
   return (
     <>
-      <main
-        className=" text-slate-300 relative overflow-hidden bg-primary"
-        id="id1"
-      >
+      <main className=" text-slate-300 relative overflow-hidden bg-primary">
         <div className="absolute flex items-center">
           <img src={bg} alt="" className="w-4/5 h-screen opacity-10" />
         </div>
@@ -75,7 +72,7 @@ export default function Home({
                 <h1>- - - - - - - - - - - - - -</h1>
               </div>
               <div
-                className={`absolute z-0 rounded-full ${accentBgColor} opacity-70 -ml-2 mt-1 w-40 h-40`}
+                className={`absolute z-0 rounded-full ${accentBgColor} bg-opacity-70 -ml-2 mt-1 w-40 h-40`}
               ></div>
               <img src={profile} alt="" className="w-3/5 z-10" />
             </div>
@@ -133,7 +130,7 @@ export default function Home({
                     <div
                       className={`w-full h-full ${
                         index === 0 ? accentBgColor : ""
-                      } rounded-2xl mix-blend-multiply opacity-40`}
+                      } rounded-2xl mix-blend-multiply opacity-30`}
                     ></div>
                   </div>
                 ))}
