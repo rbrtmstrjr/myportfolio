@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+.tooltip {
+  font-size: 2rem;
+}
+
 .outline-title {
   top: 0;
   color: transparent;

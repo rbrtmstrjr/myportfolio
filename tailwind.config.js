@@ -20,7 +20,7 @@ export default {
         secondary: "#05002C",
         tertiary: "#07003d",
         accent: "#FFC700",
-        accent1: "#FF3EA5",
+        accent1: "#ff3e6b",
         accent2: "#64ffda",
         accent3: "#ff884d",
         accent4: "#9c79ff",

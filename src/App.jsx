@@ -6,10 +6,12 @@ import Gallery from "./components/Gallery";
 import AboutMe from "./components/AboutMe";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+
+//styles
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -134,7 +136,10 @@ export default function App() {
   return (
     <div className="bg-primary">
       {showAccentTab && (
-        <div className="z-50 shadow-lg right-20 top-14 rounded-full fixed h-auto w-60 bg-white/10 backdrop-blur-lg p-3">
+        <div
+          className="z-50 shadow-lg right-20 top-14 rounded-full fixed h-auto w-60 bg-white/10 backdrop-blur-lg p-3"
+          onMouseLeave={() => setShowAccentTab(!showAccentTab)}
+        >
           <div className="flex gap-3 justify-center items-center">
             {accent.map((acc) => (
               <div
@@ -171,7 +176,7 @@ export default function App() {
         <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
         <div
           className={`text-white/50 ${showHoverTextAccent} hover:cursor-pointer flex items-center gap-2 text-xs`}
-          onClick={() => setShowAccentTab(!showAccentTab)}
+          onMouseEnter={() => setShowAccentTab(!showAccentTab)}
         >
           <Icon icon="solar:pallete-2-linear" className="text-xl" />
           <span>Themes</span>

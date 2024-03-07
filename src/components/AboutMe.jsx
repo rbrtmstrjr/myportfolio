@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 let profileData = [
   {
@@ -14,30 +16,37 @@ const dataIcon = [
   {
     id: 1,
     iconName: "icomoon-free:html-five",
+    name: "Html 5",
   },
   {
     id: 2,
     iconName: "uiw:css3",
+    name: "Css 3",
   },
   {
     id: 3,
     iconName: "cib:javascript",
+    name: "Javascript",
   },
   {
     id: 4,
     iconName: "teenyicons:react-solid",
+    name: "React Js",
   },
   {
     id: 5,
     iconName: "file-icons:tailwind",
+    name: "Tailwind Css",
   },
   {
     id: 6,
     iconName: "simple-icons:webflow",
+    name: "Webflow",
   },
   {
     id: 7,
     iconName: "bi:github",
+    name: "Github",
   },
 ];
 
@@ -92,28 +101,43 @@ export default function AboutMe({
             {profile === 1 && (
               <div className="text-sm">
                 <h1 className="mb-3 text-slate-300">Design Tools</h1>
-                <div className="flex flex-wrap gap-4 text-4xl">
+                <div className="flex flex-wrap gap-4 ">
                   <Icon
                     icon="simple-icons:adobephotoshop"
-                    className={`${showHoverAccent} hover:scale-125 transition`}
+                    className={`${showHoverAccent} text-4xl hover:scale-125 ps transition`}
                   />
+                  <Tooltip anchorSelect=".ps" place="top">
+                    Photoshop
+                  </Tooltip>
+
                   <Icon
                     icon="simple-icons:adobeillustrator"
-                    className={`${showHoverAccent} hover:scale-125 transition`}
+                    className={`${showHoverAccent} ai text-4xl hover:scale-125 transition`}
                   />
+                  <Tooltip anchorSelect=".ai" place="top">
+                    Illustrator
+                  </Tooltip>
+
                   <Icon
                     icon="gg:figma"
-                    className={`${showHoverAccent} hover:scale-125 transition`}
+                    className={`${showHoverAccent} figma text-4xl hover:scale-125 transition`}
                   />
+                  <Tooltip anchorSelect=".figma" place="top">
+                    Figma
+                  </Tooltip>
                 </div>
                 <h1 className="mb-3 mt-6 text-slate-300">Development Tools</h1>
-                <div className="flex flex-wrap gap-4 text-4xl">
+                <div className="flex flex-wrap gap-4">
                   {dataIcon.map((data) => (
-                    <Icon
-                      icon={data.iconName}
-                      className={`${showHoverAccent} hover:scale-125 transition`}
-                      key={data.id}
-                    />
+                    <div key={data.id}>
+                      <Icon
+                        icon={data.iconName}
+                        className={`${showHoverAccent} text-4xl hover:scale-125 transition`}
+                        data-tooltip-id={data.id}
+                        data-tooltip-content={data.name}
+                      />
+                      <Tooltip id={data.id} />
+                    </div>
                   ))}
                 </div>
                 <div className="flex flex-wrap mt-10 gap-2 text-xs">
