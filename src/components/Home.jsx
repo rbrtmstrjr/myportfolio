@@ -64,7 +64,7 @@ export default function Home({
         <div className="absolute flex items-center">
           <img src={bg} alt="" className="w-4/5 h-screen opacity-10" />
         </div>
-        <div className="px-4 2xl:px-20">
+        <div className="px-4 xl:px-20">
           <article className="flex flex-col md:flex-row py-6 2xl:py-20 z-10">
             <div className="w-full 2xl:w-1/2 flex flex-col justify-center items-center z-10 relative">
               <div className="flex text-xs absolute -left-2 -m-24 rotate-90">
@@ -78,10 +78,10 @@ export default function Home({
             </div>
             <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
               <div>
-                <h1 className="relative leading-none tracking-wide text-8xl 2xl:text-9xl font-black font-primary z-30">
+                <h1 className="relative leading-none tracking-wide text-7xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-wide text-8xl 2xl:text-9xl font-primary -mt-20 2xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-wide text-7xl xl:text-9xl font-primary -mt-20 xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">
