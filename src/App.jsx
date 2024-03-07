@@ -134,10 +134,10 @@ export default function App() {
     setShowContact(false);
   };
   return (
-    <div className="bg-primary">
+    <div className="bg-primary overflow-hidden">
       {showAccentTab && (
         <div
-          className="z-50 shadow-lg right-20 top-14 rounded-full fixed h-auto w-60 bg-white/10 backdrop-blur-lg p-3"
+          className="z-50 shadow-lg right-4 lg:right-20 top-14 rounded-full fixed h-auto w-60 bg-white/10 backdrop-blur-lg p-3"
           onMouseLeave={() => setShowAccentTab(!showAccentTab)}
         >
           <div className="flex gap-3 justify-center items-center">
@@ -172,7 +172,7 @@ export default function App() {
         </div>
       )}
 
-      <nav className="flex justify-between px-20 pt-4" id="id1">
+      <nav className="flex justify-between px-4 lg:px-20 pt-4" id="id1">
         <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
         <div
           className={`text-white/50 ${showHoverTextAccent} hover:cursor-pointer flex items-center gap-2 text-xs`}
@@ -189,51 +189,59 @@ export default function App() {
         accentTextColor={showTextAccent}
         accentHoverTextColor={showHoverTextAccent}
       />
-      <section className="px-20 py-20 bg-secondary filter backdrop-blur-md">
-        <div className="flex gap-16">
-          <div className="w-1/4 flex items-center flex-col">
+      <section className="px-4 2xl:px-20 py-12 2xl:py-20 bg-secondary filter backdrop-blur-md">
+        <div className="flex flex-col 2xl:flex-row gap-12 2xl:gap-16">
+          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="carbon:split-screen"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-4xl text-slate-300">150 +</h2>
+              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+                150 +
+              </h2>
             </div>
             <p className="text-white/50 text-sm mt-2">
               Website For Businesses Created
             </p>
           </div>
-          <div className="w-1/4 flex items-center flex-col">
+          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center  gap-4">
               <Icon
                 icon="mynaui:edit-one"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-4xl text-slate-300">70 +</h2>
+              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+                70 +
+              </h2>
             </div>
             <p className="text-white text-white/50 text-sm mt-2">
               Existing Website Redesigned
             </p>
           </div>
-          <div className="w-1/4 flex items-center flex-col">
+          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="iconoir:light-bulb"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-4xl text-slate-300">2 Years</h2>
+              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+                2 Years
+              </h2>
             </div>
             <p className="text-white text-white/50 text-sm mt-2">
               Solid Web Design Experience
             </p>
           </div>
-          <div className="w-1/4 flex items-center flex-col">
+          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="teenyicons:grid-layout-outline"
                 className={`${showTextAccent} text-3xl`}
               />
-              <h2 className="font-primary text-4xl text-slate-300">1 Year</h2>
+              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+                1 Year
+              </h2>
             </div>
             <p className="text-white text-white/50 text-sm mt-2">
               Graphic Design Experience
@@ -255,11 +263,11 @@ export default function App() {
         showBorderAccent={showBorderAccent}
       />
 
-      <section className="px-20 py-24 bg-primary" id="id5">
-        <h2 className="text-5xl font-primary text-slate-300 text-center mb-8">
+      <section className="px-4 2xl:px-20 py-12 2xl:py-24 bg-primary" id="id5">
+        <h2 className="text-3xl 2xl:text-5xl font-primary text-slate-300 text-center mb-8">
           What Others Say?
         </h2>
-        <div className="flex mt-16">
+        <div className="flex mt-12 2xl:mt-16">
           <Swiper
             modules={[Pagination, Autoplay]}
             navigation={true}
@@ -279,12 +287,12 @@ export default function App() {
           >
             {testimonials.map((data) => (
               <SwiperSlide key={data.id}>
-                <div className="flex items-center px-20">
-                  <div className="w-1/2 z-50">
-                    <div className="-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-10 flex flex-col gap-4">
+                <div className="flex flex-col 2xl:flex-row items-center px-0 2xl:px-20">
+                  <div className="w-full 2xl:w-1/2 z-50">
+                    <div className="-mr-0 2xl:-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-6 2xl:p-10 flex flex-col gap-4">
                       <Icon
                         icon="ph:quotes-fill"
-                        className={`z-50 -mt-20 ${showTextAccent} text-8xl`}
+                        className={`z-50 -mt-0 2xl:-mt-20 ${showTextAccent} text-8xl`}
                       />
                       <p className="text-white/50 text-sm">{data.feedback}</p>
                       <div>
@@ -296,7 +304,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="w-1/2 rounded-2xl">
+                  <div className="w-full 2xl:w-1/2 rounded-2xl">
                     <div
                       className={`w-full h-full ${showBgAccent} bg-opacity-50 rounded-2xl overflow-hidden`}
                     >

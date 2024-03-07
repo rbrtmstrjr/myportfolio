@@ -29,7 +29,10 @@ export default function Gallery() {
     setModel(true);
   };
   return (
-    <section className="flex bg-primary px-20 pt-32" id="id2">
+    <section
+      className="flex bg-primary px-4 2xl:px-20 pt-12 2xl:pt-32"
+      id="id2"
+    >
       <div className={model ? "model open" : "model"}>
         <img src={tempingSrc} alt="" />
         <Icon
