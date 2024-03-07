@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 const accent = [
   {
     id: 1,
-    color: "meow",
+    color: "bg-accent",
   },
   {
     id: 2,
@@ -70,13 +70,15 @@ const testimonials = [
 
 export default function App() {
   const [showContact, setShowContact] = useState(true);
-  const [showAccent, setShowAccent] = useState("meow");
+  const [showAccent, setShowAccent] = useState("bg-meow");
 
-  let accentBgColor = "bg-" + showAccent;
+  let accentBgColor = showAccent;
   let accentTextColor = "text-" + showAccent;
   let accentHoverTextColor = `hover:text-${showAccent}`;
   let accentHoverBgColor = `hover:bg-${showAccent}`;
-  let accentBorderColor = `border-${showAccent}`;
+  let accentBorderColor = testimonials[name];
+
+  console.log(accentBorderColor);
 
   const [showAccentTab, setShowAccentTab] = useState(false);
   const [loading, setLoading] = useState(false);
