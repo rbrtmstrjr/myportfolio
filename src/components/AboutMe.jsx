@@ -9,7 +9,7 @@ let profileData = [
     title: "Skills",
   },
   { id: 2, title: "Experience" },
-  { id: 3, title: "Education | Certifications" },
+  { id: 3, title: "Certifications" },
 ];
 
 const dataIcon = [

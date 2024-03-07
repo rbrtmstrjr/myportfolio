@@ -81,7 +81,7 @@ export default function Home({
                 <h1 className="relative leading-none tracking-wide text-7xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-wide text-7xl xl:text-9xl font-primary -mt-20 xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-wide text-7xl xl:text-9xl font-primary -mt-16 xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">

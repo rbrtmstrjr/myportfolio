@@ -179,7 +179,7 @@ export default function App() {
           onMouseEnter={() => setShowAccentTab(!showAccentTab)}
         >
           <Icon icon="solar:pallete-2-linear" className="text-xl" />
-          <span>Themes</span>
+          <span className="select-none">Themes</span>
         </div>
       </nav>
 
