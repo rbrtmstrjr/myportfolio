@@ -24,6 +24,7 @@ export default {
         accent2: "#64ffda",
         accent3: "#ff884d",
         accent4: "#9c79ff",
+        meow: "#FF3EA5",
       },
       letterSpacing: {
         mini_stretch: "0.4em",

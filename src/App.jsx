@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 const accent = [
   {
     id: 1,
-    color: "accent",
+    color: "meow",
   },
   {
     id: 2,
@@ -70,10 +70,10 @@ const testimonials = [
 
 export default function App() {
   const [showContact, setShowContact] = useState(true);
-  const [showAccent, setShowAccent] = useState("accent");
+  const [showAccent, setShowAccent] = useState("meow");
 
-  let accentBgColor = `bg-${showAccent}`;
-  let accentTextColor = `text-${showAccent}`;
+  let accentBgColor = "bg-" + showAccent;
+  let accentTextColor = "text-" + showAccent;
   let accentHoverTextColor = `hover:text-${showAccent}`;
   let accentHoverBgColor = `hover:bg-${showAccent}`;
   let accentBorderColor = `border-${showAccent}`;
@@ -247,7 +247,9 @@ export default function App() {
               <SwiperSlide key={data.id}>
                 <div className="flex items-center px-20">
                   <div className="w-1/2 z-50">
-                    <div className="-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-10 flex flex-col gap-4">
+                    <div
+                      className={`-mr-12 shadow-xl rounded-xl backdrop-blur-2xl ${accentBgColor} p-10 flex flex-col gap-4`}
+                    >
                       <Icon
                         icon="ph:quotes-fill"
                         className={`z-50 -mt-20 ${accentTextColor} text-8xl`}
