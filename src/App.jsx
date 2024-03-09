@@ -313,7 +313,7 @@ export default function App() {
         showBorderAccent={showBorderAccent}
       />
 
-      <section className="px-4 xl:px-20 py-12 xl:py-24 bg-primary" id="id5">
+      <section className="px-4 xl:px-20 py-12 xl:py-24" id="id5">
         <h2 className="text-3xl xl:text-5xl font-primary text-slate-300 text-center mb-8">
           What Others Say?
         </h2>

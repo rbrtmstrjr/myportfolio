@@ -31,7 +31,7 @@ const navigationList = [
 export default function Nav({ accentHoverBgColor }) {
   return (
     <nav className="flex relative justify-center z-50">
-      <div className="w-60 p-2 text-white bg-white/10 flex gap-3 text-xl fixed rounded-full justify-center bottom-4 backdrop-blur">
+      <div className="w-60 p-2 text-white bg-white/10 flex gap-3 text-2xl fixed rounded-full justify-center bottom-4 backdrop-blur">
         <ShowNavigation accentHoverBgColor={accentHoverBgColor} />
       </div>
     </nav>

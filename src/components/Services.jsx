@@ -57,7 +57,7 @@ export default function Services({
 }) {
   return (
     <div>
-      <section className="px-4 py-12 xl:px-20 xl:py-32 bg-primary" id="id3">
+      <section className="px-4 py-12 xl:px-20 xl:py-32 " id="id3">
         <h2 className="text-3xl 2xl:text-5xl font-primary text-slate-300 text-center mb-8">
           What I Do?
         </h2>

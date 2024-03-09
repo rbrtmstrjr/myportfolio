@@ -38,7 +38,7 @@ export default function Home({
 
   return (
     <>
-      <main className=" text-slate-300 relative overflow-hidden bg-primary">
+      <main className=" text-slate-300 relative overflow-hidden">
         <div className="absolute flex items-center">
           <img src={bg} alt="" className="w-4/5 h-screen opacity-10" />
         </div>
