@@ -59,7 +59,7 @@ export default function Home({
                 <h1 className="relative leading-none tracking-expand text-8xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-expand text-8xl xl:text-9xl font-primary -mt-20 xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-expand text-8xl xl:text-9xl font-primary opacity-70 -mt-[90px] xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">
