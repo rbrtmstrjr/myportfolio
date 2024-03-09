@@ -339,7 +339,7 @@ export default function App() {
               <SwiperSlide key={data.id}>
                 <div className="flex flex-col-reverse xl:flex-row items-center">
                   <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
-                    <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-3xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
+                    <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
                       <Icon
                         icon="ph:quotes-fill"
                         className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
@@ -354,13 +354,13 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="w-full xl:w-1/2 rounded-3xl">
+                  <div className="w-full xl:w-1/2 rounded-2xl">
                     <div
-                      className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-60 rounded-3xl overflow-hidden`}
+                      className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-70 rounded-2xl overflow-hidden`}
                     >
                       <img
                         src={data.imgUrl}
-                        className="w-full inset-0 object-cover h-full rounded-3xl mix-blend-multiply"
+                        className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
                         alt=""
                       />
                     </div>
@@ -405,7 +405,7 @@ export default function App() {
                   className={`${showTextAccent} text-3xl`}
                 />
                 <div className="ml-6">
-                  <h3 className="text-gray-400 font-secondary">09093538362</h3>
+                  <h3 className="text-gray-400 font-secondary">09465410631</h3>
                 </div>
               </div>
               <div className="flex items-center">
@@ -415,7 +415,7 @@ export default function App() {
                 />
                 <div className="ml-6">
                   <h3 className="text-gray-400 font-secondary">
-                    Albertmaestro2023@gmail.com
+                    robertmaestro09@gmail.com
                   </h3>
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-white/5  rounded-3xl p-6 md:p-12 text-gray-400">
+            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-white/5  rounded-2xl p-6 md:p-12 text-gray-400">
               {showContact ? (
                 <form onSubmit={sendEmail} className="flex flex-col gap-6">
                   <input

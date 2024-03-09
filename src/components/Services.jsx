@@ -13,7 +13,7 @@ const services = [
     icon: "mingcute:code-line",
     title: "Web Development",
     description:
-      "Dissect digital footprint, unraveling crucial patterns and trends from user behavior to strategic recommendations.",
+      "Build and maintain websites, creating functionality which help businesses promote thier product.",
     url: "#",
   },
   {
@@ -21,7 +21,7 @@ const services = [
     icon: "f7:rectangle-grid-1x2",
     title: "UI / UX Design",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+      "Optimizing user experience, creating intuitive interfaces and ensuring its smooth interactions.",
     url: "#",
   },
   {
@@ -29,7 +29,7 @@ const services = [
     icon: "streamline:pen-tool",
     title: "Graphics Design",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+      "Creating visual concept for a variety of projects, such as advertisements, logos and other digital prints.",
     url: "#",
   },
   {
@@ -37,7 +37,7 @@ const services = [
     icon: "ion:images-outline",
     title: "Photo Editing",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+      "Manipulate and enhance images to improve their quality and create visually appealing compositions.",
     url: "#",
   },
   {
@@ -45,7 +45,7 @@ const services = [
     icon: "radix-icons:camera",
     title: "Photography",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+      "Capture and create images to document events, tell stories, evoke emotions, or convey messages visually.",
     url: "#",
   },
 ];
@@ -84,7 +84,7 @@ function ShowServices({
     <>
       {showServices.map((services) => (
         <div
-          className={`w-full xl:w-slice flex flex-col bg-white/5 rounded-3xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-white/10`}
+          className={`w-full xl:w-slice flex flex-col bg-white/5 rounded-2xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-white/10`}
           key={services.id}
         >
           <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />
