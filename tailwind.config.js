@@ -17,8 +17,8 @@ export default {
 
       colors: {
         primary: "#03001C",
-        secondary: "#05002C",
-        tertiary: "#07003d",
+        secondary: "#0b0537",
+        tertiary: "#130b51",
         accent: "#FFC700",
         accent1: "#ff3e6b",
         accent2: "#64ffda",
@@ -28,6 +28,7 @@ export default {
       letterSpacing: {
         mini_stretch: "0.4em",
         stretch: "1em",
+        expand: ".05em",
       },
       width: {
         slice: "31.8%",

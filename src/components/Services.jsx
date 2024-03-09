@@ -50,7 +50,11 @@ const services = [
   },
 ];
 
-export default function Services({ showTextAccent, showBgHoverAccent }) {
+export default function Services({
+  showTextAccent,
+  showBgHoverAccent,
+  showHoverBorderAccent,
+}) {
   return (
     <div>
       <section className="px-4 py-12 xl:px-20 xl:py-32 bg-primary" id="id3">
@@ -61,6 +65,7 @@ export default function Services({ showTextAccent, showBgHoverAccent }) {
           <ShowServices
             showTextAccent={showTextAccent}
             showBgHoverAccent={showBgHoverAccent}
+            showHoverBorderAccent={showHoverBorderAccent}
           />
         </div>
       </section>
@@ -68,14 +73,18 @@ export default function Services({ showTextAccent, showBgHoverAccent }) {
   );
 }
 
-function ShowServices({ showTextAccent, showBgHoverAccent }) {
+function ShowServices({
+  showTextAccent,
+  showBgHoverAccent,
+  showHoverBorderAccent,
+}) {
   const showServices = services;
 
   return (
     <>
       {showServices.map((services) => (
         <div
-          className="w-full xl:w-slice flex flex-col bg-secondary rounded-xl p-8 xl:p-12 gap-3 hover:scale-105 transition hover:cursor-pointer hover:bg-tertiary"
+          className={`w-full xl:w-slice flex flex-col bg-secondary rounded-xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-tertiary`}
           key={services.id}
         >
           <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />

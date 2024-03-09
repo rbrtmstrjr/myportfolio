@@ -4,29 +4,6 @@ import { useState } from "react";
 import profile from "/images/gamer_bg.png";
 import bg from "/images/coder.png";
 
-const socialMedia = [
-  {
-    id: 1,
-    icon: "bi:github",
-    url: "3",
-  },
-  {
-    id: 2,
-    icon: "bi:facebook",
-    url: "#",
-  },
-  {
-    id: 3,
-    icon: "devicon-plain:linkedin",
-    url: "#",
-  },
-  {
-    id: 4,
-    icon: "teenyicons:instagram-solid",
-    url: "#",
-  },
-];
-
 const cards = [
   { id: 1, imageUrl: "bg-gamer", title: "Gamer" },
   { id: 2, imageUrl: "bg-designer", title: "Designer" },
@@ -40,6 +17,7 @@ export default function Home({
   accentBgColor,
   accentTextColor,
   accentHoverTextColor,
+  socialMedia,
 }) {
   const [startIndex, setStartIndex] = useState(0);
   const [addTransition, setTransition] = useState("");
@@ -72,16 +50,16 @@ export default function Home({
                 <h1>- - - - - - - - - - - - - -</h1>
               </div>
               <div
-                className={`absolute z-0 rounded-full ${accentBgColor} bg-opacity-70 -ml-2 mt-20 2xl:mt-1 w-40 h-40`}
+                className={`absolute z-0 rounded-full ${accentBgColor} bg-opacity-70 -ml-0 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-6 2xl:-mt-4 w-28 h-28 xl:w-40 xl:h-40`}
               ></div>
               <img src={profile} alt="" className="mt-2 2xl:mt-0 w-3/5 z-10" />
             </div>
             <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
               <div>
-                <h1 className="relative leading-none tracking-wide text-7xl xl:text-9xl font-black font-primary z-30">
+                <h1 className="relative leading-none tracking-expand text-7xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-wide text-7xl xl:text-9xl font-primary -mt-16 xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-expand text-7xl xl:text-9xl font-primary -mt-16 xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">

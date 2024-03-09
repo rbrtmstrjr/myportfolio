@@ -13,6 +13,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
+const socialMedia = [
+  {
+    id: 1,
+    icon: "bi:github",
+    url: "3",
+  },
+  {
+    id: 2,
+    icon: "bi:facebook",
+    url: "#",
+  },
+  {
+    id: 3,
+    icon: "devicon-plain:linkedin",
+    url: "#",
+  },
+  {
+    id: 4,
+    icon: "teenyicons:instagram-solid",
+    url: "#",
+  },
+];
+
 const accent = [
   {
     id: 1,
@@ -21,6 +44,7 @@ const accent = [
     hoverTextColor: "hover:text-accent",
     hoverBgColor: "hover:bg-accent",
     borderColor: "border-accent",
+    hoverBorderColor: "hover:border-accent",
   },
   {
     id: 2,
@@ -29,6 +53,7 @@ const accent = [
     hoverTextColor: "hover:text-accent1",
     hoverBgColor: "hover:bg-accent1",
     borderColor: "border-accent1",
+    hoverBorderColor: "hover:border-accent1",
   },
   {
     id: 3,
@@ -37,6 +62,7 @@ const accent = [
     hoverTextColor: "hover:text-accent2",
     hoverBgColor: "hover:bg-accent2",
     borderColor: "border-accent2",
+    hoverBorderColor: "hover:border-accent2",
   },
   {
     id: 4,
@@ -45,6 +71,7 @@ const accent = [
     hoverTextColor: "hover:text-accent3",
     hoverBgColor: "hover:bg-accent3",
     borderColor: "border-accent3",
+    hoverBorderColor: "hover:border-accent3",
   },
   {
     id: 5,
@@ -53,6 +80,7 @@ const accent = [
     hoverTextColor: "hover:text-accent4",
     hoverBgColor: "hover:bg-accent4",
     borderColor: "border-accent4",
+    hoverBorderColor: "hover:border-accent4",
   },
 ];
 
@@ -64,17 +92,17 @@ const testimonials = [
     feedback: `There are many variations of passages of Lorem Ipsum
     available, but the majority have suffered There are many
     variations of hahaaha`,
-    imgUrl: "./images/testi1.jpg",
+    imgUrl: "./images/emcy1.png",
   },
   {
     id: 2,
     name: "Floria Joseph",
-    position: "Web Designer / Analyst",
+    position: "Web Designer | Personiv Manila",
     feedback: `There are many variations of passages of Lorem Ipsum
     available, but the majority have suffered There are many
     variations of passages of Lorem Ipsum available, but the
     majority have suffered`,
-    imgUrl: "./images/testi2.jpg",
+    imgUrl: "./images/joseph_1.png",
   },
   {
     id: 3,
@@ -84,7 +112,17 @@ const testimonials = [
     available, but the majority have suffered There are many
     variations of passages of Lorem Ipsum available, but the
     majority have suffered`,
-    imgUrl: "./images/testi3.jpg",
+    imgUrl: "./images/edmark_3.png",
+  },
+  {
+    id: 4,
+    name: "Relova Larry",
+    position: "Web Designer / Analyst",
+    feedback: `There are many variations of passages of Lorem Ipsum
+    available, but the majority have suffered There are many
+    variations of passages of Lorem Ipsum available, but the
+    majority have suffered`,
+    imgUrl: "./images/larry_4.png",
   },
 ];
 
@@ -96,16 +134,27 @@ export default function App() {
     useState("hover:text-accent");
   const [showHoverBgAccent, setShowHoverBgAccent] = useState("hover:bg-accent");
   const [showBorderAccent, setShowBorderAccent] = useState("border-accent");
+  const [showHoverBorderAccent, setShowHoverBorderAccent] = useState(
+    "hover:border-accent"
+  );
 
   const [showAccentTab, setShowAccentTab] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const changeAccent = (bgColor, textColor, hoverText, hoverBg, border) => {
+  const changeAccent = (
+    bgColor,
+    textColor,
+    hoverText,
+    hoverBg,
+    border,
+    hoverBorder
+  ) => {
     setShowAccent(bgColor);
     setShowTextAccent(textColor);
     setShowHoverTextAccent(hoverText);
     setShowHoverBgAccent(hoverBg);
     setShowBorderAccent(border);
+    setShowHoverBorderAccent(hoverBorder);
 
     setShowAccentTab(false);
     setLoading(true);
@@ -151,7 +200,8 @@ export default function App() {
                     acc.textColor,
                     acc.hoverTextColor,
                     acc.hoverBgColor,
-                    acc.borderColor
+                    acc.borderColor,
+                    acc.hoverBorderColor
                   )
                 }
               ></div>
@@ -186,6 +236,7 @@ export default function App() {
         accentBgColor={showBgAccent}
         accentTextColor={showTextAccent}
         accentHoverTextColor={showHoverTextAccent}
+        socialMedia={socialMedia}
       />
       <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary filter backdrop-blur-md">
         <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
@@ -253,6 +304,7 @@ export default function App() {
         showTextAccent={showTextAccent}
         showHoverAccent={showHoverTextAccent}
         showBgHoverAccent={showHoverBgAccent}
+        showHoverBorderAccent={showHoverBorderAccent}
       />
       <AboutMe
         showAccent={showBgAccent}
@@ -286,7 +338,7 @@ export default function App() {
             {testimonials.map((data) => (
               <SwiperSlide key={data.id}>
                 <div className="flex flex-col-reverse xl:flex-row items-center">
-                  <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6">
+                  <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
                     <div className="-mr-0 xl:-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-6 xl:p-10 flex flex-col gap-4">
                       <Icon
                         icon="ph:quotes-fill"
@@ -304,7 +356,7 @@ export default function App() {
 
                   <div className="w-full xl:w-1/2 rounded-2xl">
                     <div
-                      className={`w-full h-full ${showBgAccent} bg-opacity-50 rounded-2xl overflow-hidden`}
+                      className={`w-full h-full ${showBgAccent} bg-opacity-60 rounded-2xl overflow-hidden`}
                     >
                       <img
                         src={data.imgUrl}
@@ -422,6 +474,22 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <footer className="px-6 py-12 md:px-32 md:py-12 bg-secondary flex justify-center items-center flex-col gap-2">
+        <div className="flex justify-center gap-4">
+          {socialMedia.map((social) => (
+            <Icon
+              icon={social.icon}
+              className={`text-white/30 text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
+              key={social.id}
+            />
+          ))}
+        </div>
+        <h3 className="text-gray-400 font-bold mt-4">
+          Robert Maestro Jr. | Portfolio 2024
+        </h3>
+        <p className="text-sm text-gray-400">Made With Hardwork And Love.</p>
+      </footer>
     </div>
   );
 }

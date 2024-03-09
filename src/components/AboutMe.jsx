@@ -65,7 +65,7 @@ export default function AboutMe({
   return (
     <>
       <section className="flex flex-col xl:flex-row bg-secondary" id="id4">
-        <div className="w-full h-auto border xl:w-1/2 pl-20 py-32">
+        <div className="w-full h-auto xl:w-1/2 pl-20 py-32">
           <div className="bg-aboutme bg-cover bg-center grayscale opacity-80 hover:opacity-100 transition duration-500 hover:grayscale-0 h-full w-full rounded-xl"></div>
         </div>
         <div className="w-full xl:w-1/2 flex flex-col gap-4 py-12 xl:py-32 pr-4 xl:pr-20 pl-4 xl:pl-8">
@@ -99,7 +99,7 @@ export default function AboutMe({
               </li>
             ))}
           </ul>
-          <ul className="text-white/50 p-8 xl:p-10 bg-tertiary rounded-xl mt-6">
+          <ul className="text-white/50 p-8 xl:p-10 bg-primary rounded-xl mt-6">
             {profile === 1 && (
               <div className="text-sm">
                 <h1 className="mb-3 text-slate-300">Design Tools</h1>
