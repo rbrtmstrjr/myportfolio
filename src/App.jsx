@@ -6,8 +6,6 @@ import Gallery from "./components/Gallery";
 import AboutMe from "./components/AboutMe";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -189,15 +187,15 @@ export default function App() {
         accentTextColor={showTextAccent}
         accentHoverTextColor={showHoverTextAccent}
       />
-      <section className="px-4 2xl:px-20 py-12 2xl:py-20 bg-secondary filter backdrop-blur-md">
-        <div className="flex flex-col 2xl:flex-row gap-12 2xl:gap-16">
-          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
+      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary filter backdrop-blur-md">
+        <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
+          <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="carbon:split-screen"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
                 150 +
               </h2>
             </div>
@@ -205,13 +203,13 @@ export default function App() {
               Website For Businesses Created
             </p>
           </div>
-          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
+          <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center  gap-4">
               <Icon
                 icon="mynaui:edit-one"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
                 70 +
               </h2>
             </div>
@@ -219,13 +217,13 @@ export default function App() {
               Existing Website Redesigned
             </p>
           </div>
-          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
+          <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="iconoir:light-bulb"
                 className={`${showTextAccent} text-4xl`}
               />
-              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
                 2 Years
               </h2>
             </div>
@@ -233,13 +231,13 @@ export default function App() {
               Solid Web Design Experience
             </p>
           </div>
-          <div className="w-full 2xl:w-1/4 flex items-center flex-col">
+          <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
                 icon="teenyicons:grid-layout-outline"
                 className={`${showTextAccent} text-3xl`}
               />
-              <h2 className="font-primary text-3xl 2xl:text-4xl text-slate-300">
+              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
                 1 Year
               </h2>
             </div>
@@ -263,11 +261,11 @@ export default function App() {
         showBorderAccent={showBorderAccent}
       />
 
-      <section className="px-4 2xl:px-20 py-12 2xl:py-24 bg-primary" id="id5">
-        <h2 className="text-3xl 2xl:text-5xl font-primary text-slate-300 text-center mb-8">
+      <section className="px-4 xl:px-20 py-12 xl:py-24 bg-primary" id="id5">
+        <h2 className="text-3xl xl:text-5xl font-primary text-slate-300 text-center mb-8">
           What Others Say?
         </h2>
-        <div className="flex mt-12 2xl:mt-16">
+        <div className="flex mt-12 xl:mt-16">
           <Swiper
             modules={[Pagination, Autoplay]}
             navigation={true}
@@ -287,12 +285,12 @@ export default function App() {
           >
             {testimonials.map((data) => (
               <SwiperSlide key={data.id}>
-                <div className="flex flex-col 2xl:flex-row items-center px-0 2xl:px-20">
-                  <div className="w-full 2xl:w-1/2 z-50">
-                    <div className="-mr-0 2xl:-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-6 2xl:p-10 flex flex-col gap-4">
+                <div className="flex flex-col-reverse xl:flex-row items-center">
+                  <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6">
+                    <div className="-mr-0 xl:-mr-12 shadow-xl rounded-xl backdrop-blur-2xl bg-white/20 p-6 xl:p-10 flex flex-col gap-4">
                       <Icon
                         icon="ph:quotes-fill"
-                        className={`z-50 -mt-0 2xl:-mt-20 ${showTextAccent} text-8xl`}
+                        className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
                       />
                       <p className="text-white/50 text-sm">{data.feedback}</p>
                       <div>
@@ -304,7 +302,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="w-full 2xl:w-1/2 rounded-2xl">
+                  <div className="w-full xl:w-1/2 rounded-2xl">
                     <div
                       className={`w-full h-full ${showBgAccent} bg-opacity-50 rounded-2xl overflow-hidden`}
                     >
