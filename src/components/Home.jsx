@@ -56,10 +56,10 @@ export default function Home({
             </div>
             <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
               <div>
-                <h1 className="relative leading-none tracking-expand text-7xl xl:text-9xl font-black font-primary z-30">
+                <h1 className="relative leading-none tracking-expand text-8xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-expand text-7xl xl:text-9xl font-primary -mt-16 xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-expand text-8xl xl:text-9xl font-primary -mt-20 xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">

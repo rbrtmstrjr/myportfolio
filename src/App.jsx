@@ -431,7 +431,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-tertiary rounded-lg p-6 md:p-12 text-gray-400">
+            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary rounded-lg p-6 md:p-12 text-gray-400">
               {showContact ? (
                 <form onSubmit={sendEmail} className="flex flex-col gap-6">
                   <input
@@ -485,7 +485,7 @@ export default function App() {
             />
           ))}
         </div>
-        <h3 className="text-gray-400 font-bold mt-4">
+        <h3 className="text-slate-300 font-bold mt-4">
           Robert Maestro Jr. | Portfolio 2024
         </h3>
         <p className="text-sm text-gray-400">Made With Hardwork And Love.</p>
