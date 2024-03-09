@@ -84,7 +84,7 @@ function ShowServices({
     <>
       {showServices.map((services) => (
         <div
-          className={`w-full xl:w-slice flex flex-col bg-secondary rounded-xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-tertiary`}
+          className={`w-full xl:w-slice flex flex-col bg-white/5 rounded-3xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-white/10`}
           key={services.id}
         >
           <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />

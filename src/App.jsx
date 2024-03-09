@@ -238,7 +238,7 @@ export default function App() {
         accentHoverTextColor={showHoverTextAccent}
         socialMedia={socialMedia}
       />
-      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary filter backdrop-blur-md">
+      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-white/5 filter backdrop-blur-md">
         <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
           <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
@@ -339,7 +339,7 @@ export default function App() {
               <SwiperSlide key={data.id}>
                 <div className="flex flex-col-reverse xl:flex-row items-center">
                   <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
-                    <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
+                    <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-3xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
                       <Icon
                         icon="ph:quotes-fill"
                         className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
@@ -354,13 +354,13 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="w-full xl:w-1/2 rounded-2xl">
+                  <div className="w-full xl:w-1/2 rounded-3xl">
                     <div
-                      className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-60 rounded-2xl overflow-hidden`}
+                      className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-60 rounded-3xl overflow-hidden`}
                     >
                       <img
                         src={data.imgUrl}
-                        className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
+                        className="w-full inset-0 object-cover h-full rounded-3xl mix-blend-multiply"
                         alt=""
                       />
                     </div>
@@ -374,7 +374,7 @@ export default function App() {
       </section>
 
       <section
-        className="flex justify-center items-center px-6 py-12 md:px-20 md:py-24 bg-primary"
+        className="flex justify-center items-center px-6 py-12 md:px-20 md:py-24 "
         id="id6"
       >
         <div className="w-full max-w-screen-2xl">
@@ -431,7 +431,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-white/10 border border-white/20 rounded-lg p-6 md:p-12 text-gray-400">
+            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-white/5  rounded-3xl p-6 md:p-12 text-gray-400">
               {showContact ? (
                 <form onSubmit={sendEmail} className="flex flex-col gap-6">
                   <input
@@ -475,7 +475,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="px-6 py-12 md:px-32 md:py-12 bg-secondary flex justify-center items-center flex-col gap-2">
+      <footer className="px-6 py-12 md:px-32 md:py-12 bg-white/5 flex justify-center items-center flex-col gap-2">
         <div className="flex justify-center gap-4">
           {socialMedia.map((social) => (
             <Icon
