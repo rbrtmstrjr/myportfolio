@@ -2,8 +2,8 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 import profile1 from "/images/gamerz.png";
-import profile2 from "/images/devz.png";
-import profile3 from "/images/coderz.png";
+import profile2 from "/images/designer.png";
+import profile3 from "/images/dev_.png";
 import bg from "/images/coder.png";
 
 const cards = [
@@ -45,8 +45,8 @@ export default function Home({
               <div
                 className={` ${
                   showBg
-                    ? `opacity-100 absolute z-0 rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-0 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-9 2xl:-mt-4 w-28 h-28 xl:w-40 xl:h-40`
-                    : "opacity-0"
+                    ? `opacity-100 absolute z-0 mix-blend-screen rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-3 xl:-ml-8 2xl:-ml-14 mt-4 xl:mt-9 2xl:-mt-4 w-32 h-32 xl:w-40 xl:h-40`
+                    : "opacity-80"
                 } `}
               ></div>
 
@@ -55,8 +55,8 @@ export default function Home({
                   src={card.profile}
                   alt=""
                   className={`${
-                    card.id === active ? "opacity-100" : "opacity-0"
-                  } absolute mt-2 2xl:mt-0 w-3/5 z-10 transition-opacity duration-500`}
+                    card.id === active ? "opacity-100" : "opacity-0 absolute"
+                  } mt-2 2xl:mt-0 w-4/5 xl:w-3/5 z-10 transition-opacity duration-500`}
                   key={card.id}
                 />
               ))}
