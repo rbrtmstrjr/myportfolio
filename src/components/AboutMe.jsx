@@ -64,7 +64,7 @@ export default function AboutMe({
 
   return (
     <>
-      <section className="flex flex-col xl:flex-row bg-white/5" id="id4">
+      <section className="flex flex-col xl:flex-row bg-secondary/10" id="id4">
         <div className="w-full h-auto xl:w-1/2 pl-20 py-32">
           <div className="bg-aboutme bg-cover bg-center grayscale opacity-80 hover:opacity-100 transition duration-500 hover:grayscale-0 h-full w-full rounded-2xl"></div>
         </div>
@@ -99,11 +99,11 @@ export default function AboutMe({
               </li>
             ))}
           </ul>
-          <ul className="text-white/50 p-8 xl:p-10 bg-white/5 rounded-2xl mt-6">
+          <ul className="text-white/50 p-8 xl:p-10 bg-secondary/10 rounded-2xl mt-6">
             {profile === 1 && (
               <div className="text-sm">
                 <h1 className="mb-3 text-slate-300">Design Tools</h1>
-                <div className="flex flex-wrap gap-4 ">
+                <div className="flex flex-grow flex-wrap gap-4 ">
                   <Icon
                     icon="simple-icons:adobephotoshop"
                     className={`${showHoverAccent} text-4xl hover:scale-125 ps transition`}
@@ -129,7 +129,7 @@ export default function AboutMe({
                   </Tooltip>
                 </div>
                 <h1 className="mb-3 mt-6 text-slate-300">Development Tools</h1>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-grow flex-wrap gap-4">
                   {dataIcon.map((data) => (
                     <div key={data.id}>
                       <Icon
@@ -142,7 +142,7 @@ export default function AboutMe({
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-wrap mt-10 gap-2 text-xs">
+                <div className="flex flex-grow flex-wrap mt-10 gap-3 text-xs">
                   <span
                     className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
                   >

@@ -1,16 +1,15 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 
-import profile from "/images/gamer_bg.png";
+import profile1 from "/images/gamerz.png";
+import profile2 from "/images/devz.png";
+import profile3 from "/images/coderz.png";
 import bg from "/images/coder.png";
 
 const cards = [
-  { id: 1, imageUrl: "bg-gamer", title: "Gamer" },
-  { id: 2, imageUrl: "bg-designer", title: "Designer" },
-  { id: 3, imageUrl: "bg-developer", title: "Developer" },
-  { id: 4, imageUrl: "bg-photographer", title: "Photographer" },
-  { id: 5, imageUrl: null, title: null },
-  { id: 6, imageUrl: null, title: null },
+  { id: 1, imageUrl: "bg-gamer", title: "Gamer", profile: profile1 },
+  { id: 2, imageUrl: "bg-designer", title: "Designer", profile: profile2 },
+  { id: 3, imageUrl: "bg-developer", title: "Developer", profile: profile3 },
 ];
 
 export default function Home({
@@ -19,28 +18,22 @@ export default function Home({
   accentHoverTextColor,
   socialMedia,
 }) {
-  const [startIndex, setStartIndex] = useState(0);
-  const [addTransition, setTransition] = useState("");
+  const [active, setActive] = useState(1);
+  const [showBg, setShowBg] = useState(true);
 
-  const prevSlide = () => {
-    if (startIndex > 0) {
-      setTransition("transform ease-out duration-300");
-      setStartIndex(startIndex - 1);
-    }
-  };
-
-  const nextSlide = () => {
-    if (startIndex < cards.length - 3) {
-      setTransition("transform ease-out duration-300");
-      setStartIndex(startIndex + 1);
-    }
+  const showActiveCard = (id) => {
+    setActive(id);
+    setShowBg(false);
+    setTimeout(() => {
+      setShowBg(true);
+    }, 300);
   };
 
   return (
     <>
       <main className=" text-slate-300 relative overflow-hidden">
         <div className="absolute flex items-center">
-          <img src={bg} alt="" className="w-4/5 h-screen opacity-10" />
+          <img src={bg} alt="" className="w-4/5 h-screen opacity-5" />
         </div>
         <div className="px-4 xl:px-20">
           <article className="flex flex-col md:flex-row py-6 2xl:py-20 z-10">
@@ -50,9 +43,23 @@ export default function Home({
                 <h1>- - - - - - - - - - - - - -</h1>
               </div>
               <div
-                className={`absolute z-0 rounded-full ${accentBgColor} bg-opacity-70 -ml-0 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-6 2xl:-mt-4 w-28 h-28 xl:w-40 xl:h-40`}
+                className={` ${
+                  showBg
+                    ? `opacity-100 absolute z-0 rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-0 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-9 2xl:-mt-4 w-28 h-28 xl:w-40 xl:h-40`
+                    : "opacity-0"
+                } `}
               ></div>
-              <img src={profile} alt="" className="mt-2 2xl:mt-0 w-3/5 z-10" />
+
+              {cards.map((card) => (
+                <img
+                  src={card.profile}
+                  alt=""
+                  className={`${
+                    card.id === active ? "opacity-100" : "opacity-0"
+                  } absolute mt-2 2xl:mt-0 w-3/5 z-10 transition-opacity duration-500`}
+                  key={card.id}
+                />
+              ))}
             </div>
             <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
               <div>
@@ -69,7 +76,7 @@ export default function Home({
                   online vision to life.
                 </p>
               </div>
-              <div className="flex gap-3 2xl:gap-6">
+              <div className="flex gap-3 xl:gap-6">
                 <div className="">
                   <button
                     className={`w-36 2xl:w-40 ${accentBgColor} text-sm 2xl:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
@@ -88,17 +95,18 @@ export default function Home({
                 </div>
               </div>
 
-              <div
-                className={`flex gap-3 mt-6 overflow-hidden transition ${addTransition}`}
-              >
-                {cards.slice(startIndex, startIndex + 3).map((card, index) => (
+              <div className={`flex gap-1 mt-6 overflow-hidden transition`}>
+                {cards.map((card) => (
                   <div
                     className={`relative ${
-                      index === 0 ? "opacity-100" : "opacity-30"
-                    } duration-1000 rounded-2xl w-1/2 2xl:w-1/3 h-60 ${
+                      card.id === active
+                        ? "opacity-100 scale-100 mx-1"
+                        : "opacity-30 scale-95"
+                    } duration-300 hover:cursor-pointer hover:scale-100 rounded-2xl w-1/2 2xl:w-1/3 h-60 ${
                       card.imageUrl
-                    } bg-cover bg-no-repeat1 transition`}
+                    } bg-cover bg-center bg-no-repeat1 transition`}
                     key={card.id}
+                    onClick={() => showActiveCard(card.id)}
                   >
                     <div className="absolute w-full h-full text-white text-xl">
                       <div className="flex justify-center items-end pb-4 h-full">
@@ -107,29 +115,11 @@ export default function Home({
                     </div>
                     <div
                       className={`w-full h-full ${
-                        index === 0 ? accentBgColor : ""
-                      } rounded-2xl mix-blend-multiply opacity-30`}
+                        card.id === active ? `opacity-100 ${accentBgColor}` : ""
+                      } rounded-2xl mix-blend-multiply opacity-50`}
                     ></div>
                   </div>
                 ))}
-              </div>
-              <div className="flex gap-2">
-                <Icon
-                  icon="ep:arrow-left-bold"
-                  className={`${accentHoverTextColor} ${
-                    startIndex === cards.length - 3
-                      ? `hover:scale-125 ${accentHoverTextColor} ${accentTextColor}`
-                      : "text-white/30"
-                  } hover:scale-125  transition text-xl cursor-pointer`}
-                  onClick={prevSlide}
-                />
-                <Icon
-                  icon="ep:arrow-right-bold"
-                  className={`${accentHoverTextColor} ${
-                    startIndex === 0 ? accentTextColor : "text-white/30"
-                  } hover:scale-125 transition text-xl cursor-pointer`}
-                  onClick={nextSlide}
-                />
               </div>
             </div>
           </article>

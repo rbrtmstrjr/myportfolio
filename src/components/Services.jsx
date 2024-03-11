@@ -58,10 +58,10 @@ export default function Services({
   return (
     <div>
       <section className="px-4 py-12 xl:px-20 xl:py-32 " id="id3">
-        <h2 className="text-3xl 2xl:text-5xl font-primary text-slate-300 text-center mb-8">
+        <h2 className="text-3xl xl:text-5xl font-primary text-slate-300 text-center mb-8">
           What I Do?
         </h2>
-        <div className="flex flex-col xl:flex-row flex-wrap gap-4">
+        <div className="flex flex-col xl:flex-row flex-wrap gap-5">
           <ShowServices
             showTextAccent={showTextAccent}
             showBgHoverAccent={showBgHoverAccent}
@@ -84,7 +84,7 @@ function ShowServices({
     <>
       {showServices.map((services) => (
         <div
-          className={`w-full xl:w-slice flex flex-col bg-white/5 rounded-2xl p-8 xl:p-12 gap-3 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-white/10`}
+          className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/10 rounded-2xl p-8 xl:p-12 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/20`}
           key={services.id}
         >
           <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />
@@ -95,7 +95,7 @@ function ShowServices({
           <p className="text-white/50 text-sm">{services.description}</p>
           <a href={services.url} className="mt-2">
             <button
-              className={`${showBgHoverAccent} transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+              className={`${showBgHoverAccent} mt-4 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
             >
               View Sample
             </button>

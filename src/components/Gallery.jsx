@@ -42,7 +42,7 @@ export default function Gallery() {
         <div className="gallery">
           {imgData.map((item, index) => (
             <div
-              className="pics grayscale hover:grayscale-0 opacity-80 hover:opacity-100 hover:scale-105"
+              className="pics grayscale hover:grayscale-0 opacity-70 hover:opacity-100 hover:scale-105"
               key={index}
               onClick={() => getImg(item.imgSrc)}
             >

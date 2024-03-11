@@ -238,10 +238,10 @@ export default function App() {
         accentHoverTextColor={showHoverTextAccent}
         socialMedia={socialMedia}
       />
-      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-white/5 filter backdrop-blur-md">
+      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md">
         <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
           <div className="w-full xl:w-1/4 flex items-center flex-col">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-grow items-center gap-4">
               <Icon
                 icon="carbon:split-screen"
                 className={`${showTextAccent} text-4xl`}
@@ -374,7 +374,7 @@ export default function App() {
       </section>
 
       <section
-        className="flex justify-center items-center px-6 py-12 md:px-20 md:py-24 "
+        className="flex justify-center bg-secondary/10 items-center px-6 py-12 md:px-20 md:py-24 "
         id="id6"
       >
         <div className="w-full max-w-screen-2xl">
@@ -431,7 +431,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-white/5  rounded-2xl p-6 md:p-12 text-gray-400">
+            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/10  rounded-2xl p-8 md:p-12 text-gray-400">
               {showContact ? (
                 <form onSubmit={sendEmail} className="flex flex-col gap-6">
                   <input
@@ -475,7 +475,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="px-6 py-12 md:px-32 md:py-12 bg-white/5 flex justify-center items-center flex-col gap-2">
+      <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col gap-2">
         <div className="flex justify-center gap-4">
           {socialMedia.map((social) => (
             <Icon

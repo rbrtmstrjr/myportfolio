@@ -9,15 +9,14 @@ export default {
     extend: {
       backgroundImage: {
         aboutme: "url('/images/img8.jpg')",
-        gamer: "url('/images/testi2.jpg')",
-        designer: "url('/images/testi1.jpg')",
-        developer: "url('/images/testi3.jpg')",
-        photographer: "url('/images/gamer_.jpg')",
+        gamer: "url('/images/gamer_bg.jpg')",
+        designer: "url('/images/designers.jpg')",
+        developer: "url('/images/devs.jpg')",
       },
 
       colors: {
         primary: "#03001C",
-        secondary: "#0b0537",
+        secondary: "#1100a1",
         tertiary: "#130b51",
         accent: "#FFC700",
         accent1: "#ff3e6b",
