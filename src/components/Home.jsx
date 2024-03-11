@@ -45,7 +45,7 @@ export default function Home({
               <div
                 className={` ${
                   showBg
-                    ? `opacity-100 absolute z-0 mix-blend-screen rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-3 xl:-ml-8 2xl:-ml-14 mt-4 xl:mt-9 2xl:-mt-4 w-32 h-32 xl:w-40 xl:h-40`
+                    ? `opacity-100 absolute z-0 mix-blend-screen rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-3 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-9 2xl:-mt-4 w-32 h-32 xl:w-40 xl:h-40`
                     : "opacity-80"
                 } `}
               ></div>
@@ -63,10 +63,10 @@ export default function Home({
             </div>
             <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
               <div>
-                <h1 className="relative leading-none tracking-expand text-8xl xl:text-9xl font-black font-primary z-30">
+                <h1 className="relative leading-none tracking-expand text-7xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON
                 </h1>
-                <h1 className="outline-title leading-none tracking-expand text-8xl xl:text-9xl font-primary opacity-70 -mt-[90px] xl:-mt-28 ml-2 z-20">
+                <h1 className="outline-title leading-none tracking-expand text-7xl xl:text-9xl font-primary opacity-70 -mt-[63px] xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
                 <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">
@@ -84,7 +84,7 @@ export default function Home({
                     CONNECT
                   </button>
                 </div>
-                <div className="flex items-center gap-3 2xl:gap-4 text-4xl text-white/50">
+                <div className="flex items-center gap-2 2xl:gap-4 text-4xl text-white/50">
                   {socialMedia.map((social) => (
                     <Icon
                       icon={social.icon}
