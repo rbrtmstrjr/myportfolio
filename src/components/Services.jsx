@@ -58,10 +58,16 @@ export default function Services({
   return (
     <div>
       <section className="px-4 py-12 xl:px-20 xl:py-32 " id="id3">
-        <h2 className="text-3xl xl:text-5xl font-primary text-slate-300 text-center mb-8">
-          What I Do?
-        </h2>
-        <div className="flex flex-col xl:flex-row flex-wrap gap-5">
+        <div className="">
+          <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
+            WHAT I DO?
+          </label>
+          <h2 className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8">
+            Services Offered
+          </h2>
+        </div>
+
+        <div className="flex flex-col xl:flex-row flex-wrap gap-4">
           <ShowServices
             showTextAccent={showTextAccent}
             showBgHoverAccent={showBgHoverAccent}
@@ -84,7 +90,7 @@ function ShowServices({
     <>
       {showServices.map((services) => (
         <div
-          className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/10 rounded-2xl p-8 xl:p-12 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/20`}
+          className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
           key={services.id}
         >
           <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />

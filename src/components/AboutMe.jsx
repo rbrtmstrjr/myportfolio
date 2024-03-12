@@ -69,8 +69,11 @@ export default function AboutMe({
           <div className="bg-aboutme bg-cover bg-center grayscale opacity-80 hover:opacity-100 transition duration-500 hover:grayscale-0 h-full w-full rounded-2xl"></div>
         </div>
         <div className="w-full xl:w-1/2 flex flex-col gap-4 py-12 xl:py-32 pr-4 xl:pr-20 pl-4 xl:pl-8">
-          <h2 className="text-4xl xl:text-5xl font-primary text-slate-300">
-            About Me
+          <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
+            ABOUT ME
+          </label>
+          <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
+            Hi Im Rajon
           </h2>
           <p className="text-white/50 text-sm">
             There are many variations of passages of Lorem Ipsum available, but
@@ -99,7 +102,7 @@ export default function AboutMe({
               </li>
             ))}
           </ul>
-          <ul className="text-white/50 p-8 xl:p-10 bg-secondary/10 rounded-2xl mt-6">
+          <ul className="text-white/50 p-8 xl:p-10 bg-secondary/20 rounded-2xl mt-6">
             {profile === 1 && (
               <div className="text-sm">
                 <h1 className="mb-3 text-slate-300">Design Tools</h1>

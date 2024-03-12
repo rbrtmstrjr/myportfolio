@@ -314,7 +314,10 @@ export default function App() {
       />
 
       <section className="px-4 xl:px-20 py-12 xl:py-24" id="id5">
-        <h2 className="text-3xl xl:text-5xl font-primary text-slate-300 text-center mb-8">
+        <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
+          FEEDBACK
+        </label>
+        <h2 className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8">
           What Others Say?
         </h2>
         <div className="flex mt-12 xl:mt-16">
@@ -380,9 +383,12 @@ export default function App() {
         <div className="w-full max-w-screen-2xl">
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12">
-              <h1 className="text-slate-300 font-primary text-3xl md:text-5xl">
-                Get In Touch!
-              </h1>
+              <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
+                CONNECT
+              </label>
+              <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
+                Get in Touch
+              </h2>
               <p className="text-gray-400 text-sm leading-6">
                 Thank you for exploring my portfolio! If you have any questions,
                 collaboration ideas, or just want to connect, Id love to hear
@@ -399,16 +405,8 @@ export default function App() {
                   className={`w-2 rounded-full p-1  bg-opacity-40 ${showBgAccent}`}
                 ></div>
               </div>
-              <div className="flex mt-6 md:mt-12 items-center">
-                <Icon
-                  icon="carbon:phone"
-                  className={`${showTextAccent} text-3xl`}
-                />
-                <div className="ml-6">
-                  <h3 className="text-gray-400 font-secondary">09465410631</h3>
-                </div>
-              </div>
-              <div className="flex items-center">
+
+              <div className="flex items-center mt-6">
                 <Icon
                   icon="mage:email"
                   className={`${showTextAccent} text-3xl`}
@@ -431,7 +429,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/10  rounded-2xl p-8 md:p-12 text-gray-400">
+            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400">
               {showContact ? (
                 <form onSubmit={sendEmail} className="flex flex-col gap-6">
                   <input
@@ -475,7 +473,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col gap-2">
+      <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col">
         <div className="flex justify-center gap-4">
           {socialMedia.map((social) => (
             <Icon
@@ -488,7 +486,9 @@ export default function App() {
         <h3 className="text-slate-300 font-bold mt-4">
           Robert Maestro Jr. | Portfolio 2024
         </h3>
-        <p className="text-sm text-gray-400">Made With Hardwork And Love.</p>
+        <p className="text-sm text-gray-400 pb-8">
+          Made With Pure Hardwork And Love.
+        </p>
       </footer>
     </div>
   );
