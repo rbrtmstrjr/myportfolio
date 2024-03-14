@@ -110,14 +110,23 @@ export default function Services({
       </section>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+          <button
+            onClick={closeModal}
+            className="absolute text-2xl top-1 right-3 text-white hover:text-gray-300"
+          >
+            &times;
+          </button>
           <div className="bg-tertiary w-11/12 xl:w-4/5 mx-auto rounded-2xl shadow-xl z-50">
             <div>
               {isServices === 1 && (
                 <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
-                  <div className="w-full xl:w-2/5 p-5 xl:p-14 flex justify-center flex-col gap-2">
+                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
-                      Web Design Sample
+                      Action Coach Dame County
                     </h2>
+                    <p className="text-white/60 font-secondary text-sm">
+                      (Coaching Website)
+                    </p>
                     <p className="text-white/60 font-secondary text-sm">
                       A creative web designer, I craft digital experiences that
                       leave a lasting impression. With a keen eye for aesthetics
@@ -128,40 +137,42 @@ export default function Services({
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Problem Solver
+                        Thryv Editor
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Teamwork
+                        Coaching Website
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Adaptability
+                        Responsive
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Creative
+                        Minimal
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Flexibility
-                      </span>
-                      <span
-                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
-                      >
-                        Time Management
+                        Modern
                       </span>
                     </div>
-                    <div className="flex gap-3 mt-6 xl:mt-8">
-                      <button
-                        className={`${showBgAccent} w-24 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                    <div className="flex gap-3 mt-2 xl:mt-8">
+                      <a
+                        href="https://siteeditor.thryv.com/preview/9e3e8c25"
+                        target="_blank"
+                        rel="noreferrer"
                       >
-                        Visit Site
-                      </button>
+                        <button
+                          className={`${showBgAccent} w-24 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                        >
+                          Visit Site
+                        </button>
+                      </a>
+
                       <button
                         className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
                       >
@@ -170,16 +181,10 @@ export default function Services({
                     </div>
                   </div>
                   <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
-                    <button
-                      onClick={closeModal}
-                      className="absolute text-2xl top-1 right-3 text-white hover:text-gray-300"
-                    >
-                      &times;
-                    </button>
                     <img
-                      src="./images/dashboard2.png"
+                      src="./images/res.png"
                       alt=""
-                      className="rounded-xl w-full"
+                      className="w-full rounded-2xl"
                     />
                   </div>
                 </div>
