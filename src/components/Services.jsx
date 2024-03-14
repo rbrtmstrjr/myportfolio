@@ -158,18 +158,18 @@ export default function Services({
                     </div>
                     <div className="flex gap-3 mt-6 xl:mt-8">
                       <button
-                        className={`${showBgAccent} w-24 mt-4 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                        className={`${showBgAccent} w-24 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
                       >
                         Visit Site
                       </button>
                       <button
-                        className={`${showBgHoverAccent} w-28 mt-4 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
                       >
                         View More
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-secondary/20">
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
                     <button
                       onClick={closeModal}
                       className="absolute text-2xl top-1 right-3 text-white hover:text-gray-300"

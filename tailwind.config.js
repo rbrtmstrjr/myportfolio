@@ -12,7 +12,7 @@ export default {
         gamer: "url('/images/gamer_bg.jpg')",
         designer: "url('/images/designers.jpg')",
         developer: "url('/images/devs.jpg')",
-        dashboard: "url('/images/dashboard2.png')",
+        dashboard: "url('/images/dashboard_.png')",
       },
 
       colors: {
