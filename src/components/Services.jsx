@@ -1,4 +1,6 @@
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+
 const services = [
   {
     id: 1,
@@ -51,10 +53,23 @@ const services = [
 ];
 
 export default function Services({
+  showBgAccent,
   showTextAccent,
   showBgHoverAccent,
-  showHoverBorderAccent,
+  showLightAccent,
 }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isServices, setIsServices] = useState(0);
+
+  const openModal = (id) => {
+    setIsModalOpen(true);
+    setIsServices(id);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <section className="px-4 py-12 xl:px-20 xl:py-32 " id="id3">
@@ -68,46 +83,111 @@ export default function Services({
         </div>
 
         <div className="flex flex-col xl:flex-row flex-wrap gap-4">
-          <ShowServices
-            showTextAccent={showTextAccent}
-            showBgHoverAccent={showBgHoverAccent}
-            showHoverBorderAccent={showHoverBorderAccent}
-          />
+          {services.map((services) => (
+            <div
+              className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
+              key={services.id}
+            >
+              <Icon
+                icon={services.icon}
+                className={`${showTextAccent} text-5xl`}
+              />
+
+              <h3 className="text-slate-300 font-primary text-xl 2xl:text-2xl mt-8">
+                {services.title}
+              </h3>
+              <p className="text-white/50 text-sm">{services.description}</p>
+
+              <button
+                className={`${showBgHoverAccent} w-28 mt-4 hover:transition hover:duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                onClick={() => openModal(services.id)}
+              >
+                View Sample
+              </button>
+            </div>
+          ))}
         </div>
       </section>
-    </div>
-  );
-}
-
-function ShowServices({
-  showTextAccent,
-  showBgHoverAccent,
-  showHoverBorderAccent,
-}) {
-  const showServices = services;
-
-  return (
-    <>
-      {showServices.map((services) => (
-        <div
-          className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:border-t-8  ${showHoverBorderAccent} hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
-          key={services.id}
-        >
-          <Icon icon={services.icon} className={`${showTextAccent} text-4xl`} />
-
-          <h3 className="text-slate-300 font-primary text-xl 2xl:text-2xl mt-4">
-            {services.title}
-          </h3>
-          <p className="text-white/50 text-sm">{services.description}</p>
-          <a href={services.url} className="mt-2">
-            <button
-              className={`${showBgHoverAccent} mt-4 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-            >
-              View Sample
-            </button>
-          </a>
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="bg-tertiary w-11/12 xl:w-4/5 mx-auto rounded-2xl shadow-xl z-50">
+            <div>
+              {isServices === 1 && (
+                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                  <div className="w-full xl:w-2/5 p-5 xl:p-14 flex justify-center flex-col gap-2">
+                    <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
+                      Web Design Sample
+                    </h2>
+                    <p className="text-white/60 font-secondary text-sm">
+                      A creative web designer, I craft digital experiences that
+                      leave a lasting impression. With a keen eye for aesthetics
+                      and a knack for turning ideas into stunning websites, I
+                      bring your online vision to life.
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs mt-4">
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Problem Solver
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Teamwork
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Adaptability
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Creative
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Flexibility
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Time Management
+                      </span>
+                    </div>
+                    <div className="flex gap-3 mt-6 xl:mt-8">
+                      <button
+                        className={`${showBgAccent} w-24 mt-4 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                      >
+                        Visit Site
+                      </button>
+                      <button
+                        className={`${showBgHoverAccent} w-28 mt-4 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                      >
+                        View More
+                      </button>
+                    </div>
+                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-secondary/20">
+                    <button
+                      onClick={closeModal}
+                      className="absolute text-2xl top-1 right-3 text-white hover:text-gray-300"
+                    >
+                      &times;
+                    </button>
+                    <img
+                      src="./images/dashboard2.png"
+                      alt=""
+                      className="rounded-xl w-full"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-      ))}
-    </>
+      )}
+    </div>
   );
 }

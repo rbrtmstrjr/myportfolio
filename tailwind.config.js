@@ -12,6 +12,7 @@ export default {
         gamer: "url('/images/gamer_bg.jpg')",
         designer: "url('/images/designers.jpg')",
         developer: "url('/images/devs.jpg')",
+        dashboard: "url('/images/dashboard2.png')",
       },
 
       colors: {
@@ -23,11 +24,16 @@ export default {
         accent2: "#64ffda",
         accent3: "#ff884d",
         accent4: "#9c79ff",
+        accent10: "#fff4cb",
+        accent11: "#ffc3d1",
+        accent22: "#c8fff2",
+        accent33: "#ffdbc9",
+        accent44: "#dbceff",
       },
       letterSpacing: {
         mini_stretch: "0.4em",
         stretch: "1em",
-        expand: ".05em",
+        expand: ".02em",
       },
       width: {
         slice: "31.8%",

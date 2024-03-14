@@ -45,6 +45,7 @@ const accent = [
     hoverBgColor: "hover:bg-accent",
     borderColor: "border-accent",
     hoverBorderColor: "hover:border-accent",
+    light: "bg-accent10",
   },
   {
     id: 2,
@@ -54,6 +55,7 @@ const accent = [
     hoverBgColor: "hover:bg-accent1",
     borderColor: "border-accent1",
     hoverBorderColor: "hover:border-accent1",
+    light: "bg-accent11",
   },
   {
     id: 3,
@@ -63,6 +65,7 @@ const accent = [
     hoverBgColor: "hover:bg-accent2",
     borderColor: "border-accent2",
     hoverBorderColor: "hover:border-accent2",
+    light: "bg-accent22",
   },
   {
     id: 4,
@@ -72,6 +75,7 @@ const accent = [
     hoverBgColor: "hover:bg-accent3",
     borderColor: "border-accent3",
     hoverBorderColor: "hover:border-accent3",
+    light: "bg-accent33",
   },
   {
     id: 5,
@@ -81,6 +85,7 @@ const accent = [
     hoverBgColor: "hover:bg-accent4",
     borderColor: "border-accent4",
     hoverBorderColor: "hover:border-accent4",
+    light: "bg-accent44",
   },
 ];
 
@@ -134,6 +139,7 @@ export default function App() {
     useState("hover:text-accent");
   const [showHoverBgAccent, setShowHoverBgAccent] = useState("hover:bg-accent");
   const [showBorderAccent, setShowBorderAccent] = useState("border-accent");
+  const [showLightAccent, setShowLightAccent] = useState("bg-accent10");
   const [showHoverBorderAccent, setShowHoverBorderAccent] = useState(
     "hover:border-accent"
   );
@@ -147,7 +153,8 @@ export default function App() {
     hoverText,
     hoverBg,
     border,
-    hoverBorder
+    hoverBorder,
+    light
   ) => {
     setShowAccent(bgColor);
     setShowTextAccent(textColor);
@@ -155,6 +162,7 @@ export default function App() {
     setShowHoverBgAccent(hoverBg);
     setShowBorderAccent(border);
     setShowHoverBorderAccent(hoverBorder);
+    setShowLightAccent(light);
 
     setShowAccentTab(false);
     setLoading(true);
@@ -201,7 +209,8 @@ export default function App() {
                     acc.hoverTextColor,
                     acc.hoverBgColor,
                     acc.borderColor,
-                    acc.hoverBorderColor
+                    acc.hoverBorderColor,
+                    acc.light
                   )
                 }
               ></div>
@@ -304,7 +313,8 @@ export default function App() {
         showTextAccent={showTextAccent}
         showHoverAccent={showHoverTextAccent}
         showBgHoverAccent={showHoverBgAccent}
-        showHoverBorderAccent={showHoverBorderAccent}
+        showBgAccent={showBgAccent}
+        showLightAccent={showLightAccent}
       />
       <AboutMe
         showAccent={showBgAccent}

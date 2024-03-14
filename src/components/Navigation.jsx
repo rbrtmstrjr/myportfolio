@@ -31,7 +31,7 @@ const navigationList = [
 export default function Nav({ accentHoverBgColor }) {
   return (
     <nav className="flex relative justify-center z-50">
-      <div className="w-60 p-2 text-white bg-white/10 flex gap-3 text-2xl fixed rounded-full justify-center bottom-4 backdrop-blur">
+      <div className="w-64 p-2 text-slate-300 bg-white/10 flex gap-3 text-2xl fixed rounded-full justify-center bottom-4 backdrop-blur">
         <ShowNavigation accentHoverBgColor={accentHoverBgColor} />
       </div>
     </nav>
@@ -46,7 +46,7 @@ function ShowNavigation({ accentHoverBgColor }) {
       {getNavigation.map((nav) => (
         <a
           href={nav.url}
-          className={`${accentHoverBgColor} rounded-md p-1 hover:text-primary hover:scale-110 transition`}
+          className={`${accentHoverBgColor} rounded-md p-1 hover:text-tertiary hover:scale-110 transition`}
           key={nav.id}
         >
           <Icon icon={nav.icon} />
