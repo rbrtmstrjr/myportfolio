@@ -69,7 +69,7 @@ export default function Home({
                 <h1 className="outline-title leading-none tracking-expand text-7xl xl:text-9xl font-primary opacity-70 -mt-[63px] xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
-                <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-14">
+                <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-28">
                   A creative web designer, I craft digital experiences that
                   leave a lasting impression. With a keen eye for aesthetics and
                   a knack for turning ideas into stunning websites, I bring your
@@ -78,11 +78,13 @@ export default function Home({
               </div>
               <div className="flex gap-3 xl:gap-6">
                 <div className="">
-                  <button
-                    className={`w-36 2xl:w-40 ${accentBgColor} text-sm 2xl:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
-                  >
-                    CONNECT
-                  </button>
+                  <a href="#id6">
+                    <button
+                      className={`w-36 2xl:w-40 ${accentBgColor} text-sm 2xl:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
+                    >
+                      CONNECT
+                    </button>
+                  </a>
                 </div>
                 <div className="flex items-center gap-2 2xl:gap-4 text-4xl text-white/50">
                   {socialMedia.map((social) => (

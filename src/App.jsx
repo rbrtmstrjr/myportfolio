@@ -232,11 +232,17 @@ export default function App() {
       <nav className="flex justify-between px-4 lg:px-20 pt-4" id="id1">
         <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
         <div
-          className={`text-white/50 ${showHoverTextAccent} hover:cursor-pointer flex items-center gap-2 text-xs`}
-          onMouseEnter={() => setShowAccentTab(!showAccentTab)}
+          className={`text-white/50 hover:cursor-pointer flex items-center gap-6 text-xs`}
         >
-          <Icon icon="solar:pallete-2-linear" className="text-xl" />
-          <span className="select-none">Themes</span>
+          <a href="./images/maestro_robert_resume.pdf" target="_blank">
+            <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
+          </a>
+          <h1
+            className={`select-none ${showHoverTextAccent}`}
+            onMouseEnter={() => setShowAccentTab(!showAccentTab)}
+          >
+            Themes
+          </h1>
         </div>
       </nav>
 
