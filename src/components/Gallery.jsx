@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 import { Icon } from "@iconify/react";
-import Img4 from "/images/img4.jpeg";
-import Img5 from "/images/img5.jpeg";
-import Img6 from "/images/img6.jpeg";
-import Img7 from "/images/img7.jpg";
-import Img8 from "/images/img8.jpg";
+import Img3 from "/images/sample_image6.jpg";
+import Img4 from "/images/sample_image1.jpg";
+import Img5 from "/images/sample_image3.jpg";
+import Img6 from "/images/sample_image2.jpg";
+import Img7 from "/images/sample_image4.jpg";
+import Img8 from "/images/sample_image5.jpg";
 import Img9 from "/images/dashboard2.png";
 import Img10 from "/images/dashboard.png";
 
@@ -17,8 +18,9 @@ export default function Gallery() {
     { id: 7, imgSrc: Img7 },
     { id: 8, imgSrc: Img8 },
     { id: 9, imgSrc: Img9 },
-    { id: 10, imgSrc: Img5 },
+    { id: 10, imgSrc: Img3 },
     { id: 11, imgSrc: Img10 },
+    { id: 11, imgSrc: Img5 },
   ];
 
   const [model, setModel] = useState(false);

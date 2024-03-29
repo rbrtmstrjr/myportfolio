@@ -88,11 +88,17 @@ export default function Home({
                 </div>
                 <div className="flex items-center gap-2 2xl:gap-4 text-4xl text-white/50">
                   {socialMedia.map((social) => (
-                    <Icon
-                      icon={social.icon}
-                      className={`text-white/30 ${accentHoverTextColor} hover:scale-125 transition`}
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noreferrer"
                       key={social.id}
-                    />
+                    >
+                      <Icon
+                        icon={social.icon}
+                        className={`text-white/30 ${accentHoverTextColor} hover:scale-125 transition`}
+                      />
+                    </a>
                   ))}
                 </div>
               </div>

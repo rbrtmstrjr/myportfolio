@@ -76,11 +76,10 @@ export default function AboutMe({
             Hi Im Rajon
           </h2>
           <p className="text-white/50 text-sm">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered <a href="#">alteration</a> in some form,
-            by injected humour, or randomised words which dont look even
-            slightly believable. If you are going to use a passage of Lorem
-            Ipsum,
+            A dynamic designer with a passion for creating visually stunning
+            digital experiences. With two years of experience as a web designer
+            and an additional year specializing in graphic design, I can bring a
+            unique blend of creativity and technical expertise to your projects.
           </p>
           <ul className="flex gap-5 xl:gap-8 text-slate-300">
             {profileData.map((data, index) => (

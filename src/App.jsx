@@ -17,22 +17,22 @@ const socialMedia = [
   {
     id: 1,
     icon: "bi:github",
-    url: "3",
+    url: "https://github.com/rbrtmstrjr",
   },
   {
     id: 2,
     icon: "bi:facebook",
-    url: "#",
+    url: "https://www.facebook.com/rbrtmstrjr09",
   },
   {
     id: 3,
     icon: "devicon-plain:linkedin",
-    url: "#",
+    url: "https://www.linkedin.com/in/robert-maestro-64a7981a0/",
   },
   {
     id: 4,
     icon: "teenyicons:instagram-solid",
-    url: "#",
+    url: "https://www.instagram.com/rajon_ix/",
   },
 ];
 
@@ -262,7 +262,7 @@ export default function App() {
                 className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                150 +
+                200 +
               </h2>
             </div>
             <p className="text-white/50 text-sm mt-2">
@@ -276,7 +276,7 @@ export default function App() {
                 className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                70 +
+                100 +
               </h2>
             </div>
             <p className="text-white text-white/50 text-sm mt-2">
@@ -492,11 +492,18 @@ export default function App() {
       <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col">
         <div className="flex justify-center gap-4">
           {socialMedia.map((social) => (
-            <Icon
-              icon={social.icon}
-              className={`text-white/30 text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noreferrer"
               key={social.id}
-            />
+            >
+              <Icon
+                icon={social.icon}
+                className={`text-white/30 text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
+                key={social.id}
+              />
+            </a>
           ))}
         </div>
         <h3 className="text-slate-300 font-bold mt-4">
