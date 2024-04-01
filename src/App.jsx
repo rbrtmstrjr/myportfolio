@@ -94,7 +94,7 @@ const testimonials = [
     id: 1,
     name: "Dikit Marichris",
     position: "Associate Process Manager | Personiv Manila",
-    feedback: `Robert is a good team member, although he has not talk too much in the team, but his creativity can solve business design issue. A very skilled and cool one!`,
+    feedback: `Robert is a good team member, he is very approachable and his creativity can solve business design issue. A very skilled and cool one!`,
     imgUrl: "./images/emcy1.png",
   },
   {
