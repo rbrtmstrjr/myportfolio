@@ -93,40 +93,29 @@ const testimonials = [
   {
     id: 1,
     name: "Dikit Marichris",
-    position: "Associate Process Manager",
-    feedback: `There are many variations of passages of Lorem Ipsum
-    available, but the majority have suffered There are many
-    variations of hahaaha`,
+    position: "Associate Process Manager | Personiv Manila",
+    feedback: `Robert is a good team member, although he has not talk too much in the team, but his creativity can solve business design issue. A very skilled and cool one!`,
     imgUrl: "./images/emcy1.png",
   },
   {
     id: 2,
     name: "Floria Joseph",
     position: "Web Designer | Personiv Manila",
-    feedback: `There are many variations of passages of Lorem Ipsum
-    available, but the majority have suffered There are many
-    variations of passages of Lorem Ipsum available, but the
-    majority have suffered`,
+    feedback: `I work with Rob, he is very creative when it comes to design and layouts and he is one of the most approachable when I need help at work.`,
     imgUrl: "./images/joseph_1.png",
   },
   {
     id: 3,
     name: "Isla Edmark",
-    position: "Web Designer / Analyst",
-    feedback: `There are many variations of passages of Lorem Ipsum
-    available, but the majority have suffered There are many
-    variations of passages of Lorem Ipsum available, but the
-    majority have suffered`,
+    position: "Analyst | Personiv Manila",
+    feedback: `His talent for crafting visually stunning web designs is impressive! He is creative and reliable for giving design quality tips and solutions.`,
     imgUrl: "./images/edmark_3.png",
   },
   {
     id: 4,
     name: "Relova Larry",
-    position: "Web Designer / Analyst",
-    feedback: `There are many variations of passages of Lorem Ipsum
-    available, but the majority have suffered There are many
-    variations of passages of Lorem Ipsum available, but the
-    majority have suffered`,
+    position: "Web Designer | Personiv Manila",
+    feedback: `Robert is so approachable. Every time I have questions, instead of asking my teammates, I directly ask him for guidance. He’s so good at designing things from website to graphics to branding designs. I believe his skills can help small/large businesses known in digital marketing. Kudos to him!`,
     imgUrl: "./images/larry_4.png",
   },
 ];
@@ -446,44 +435,49 @@ export default function App() {
               </div>
             </div>
             <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400">
-              {showContact ? (
-                <form onSubmit={sendEmail} className="flex flex-col gap-6">
-                  <input
-                    type="text"
-                    name="name"
-                    className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                    placeholder="Name"
-                    required
-                  />
+              <div className="flex justify-center items-center">
+                {showContact ? (
+                  <form
+                    onSubmit={sendEmail}
+                    className="w-full flex flex-col gap-6"
+                  >
+                    <input
+                      type="text"
+                      name="name"
+                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                      placeholder="Name"
+                      required
+                    />
 
-                  <input
-                    type="email"
-                    name="user_email"
-                    className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                    placeholder="Email"
-                    required
-                  />
+                    <input
+                      type="email"
+                      name="user_email"
+                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                      placeholder="Email"
+                      required
+                    />
 
-                  <textarea
-                    type="text"
-                    name="message"
-                    className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                    placeholder="Message"
-                    required
-                  />
+                    <textarea
+                      type="text"
+                      name="message"
+                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                      placeholder="Message"
+                      required
+                    />
 
-                  <input
-                    type="submit"
-                    className={`w-24 text-primary text-sm ${showBgAccent} p-2 rounded-lg cursor-pointer`}
-                    value="Send"
-                  />
-                </form>
-              ) : (
-                <p>
-                  Thanks for reaching me out. I will response as soon as
-                  possible!
-                </p>
-              )}
+                    <input
+                      type="submit"
+                      className={`w-24 text-primary text-sm ${showBgAccent} p-2 rounded-lg cursor-pointer`}
+                      value="Send"
+                    />
+                  </form>
+                ) : (
+                  <p>
+                    Thanks for reaching me out. I will response as soon as
+                    possible!
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>
