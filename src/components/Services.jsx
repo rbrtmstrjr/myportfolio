@@ -128,10 +128,9 @@ export default function Services({
                       (Coaching Website)
                     </p>
                     <p className="text-white/60 font-secondary text-sm">
-                      A creative web designer, I craft digital experiences that
-                      leave a lasting impression. With a keen eye for aesthetics
-                      and a knack for turning ideas into stunning websites, I
-                      bring your online vision to life.
+                      Action Coach Dane County is a coaching business that you
+                      can rely on to guide you to increased profit and operating
+                      efficiencies.
                     </p>
                     <div className="flex flex-wrap gap-3 text-xs mt-4">
                       <span
@@ -153,11 +152,6 @@ export default function Services({
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
                         Minimal
-                      </span>
-                      <span
-                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
-                      >
-                        Modern
                       </span>
                     </div>
                     <div className="flex gap-3 mt-2 xl:mt-8">
@@ -183,6 +177,82 @@ export default function Services({
                   <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
                     <img
                       src="./images/res.png"
+                      alt=""
+                      className="w-full rounded-2xl"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {isServices === 2 && (
+                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                    <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
+                      Wanderlinx
+                    </h2>
+                    <p className="text-white/60 font-secondary text-sm">
+                      (Travel Services)
+                    </p>
+                    <p className="text-white/60 font-secondary text-sm">
+                      Wanderlinx is a platform streamlines operates for travel
+                      agents, handling ticket bookings across agencies while
+                      preserving and enhancing brand identities.
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs mt-4">
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        React Js
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Tailwind Css
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Responsive
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Minimal
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Modern
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Travel Agency
+                      </span>
+                    </div>
+                    <div className="flex gap-3 mt-2 xl:mt-8">
+                      <a
+                        href="https://mywanderlinx.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <button
+                          className={`${showBgAccent} w-24 transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                        >
+                          Visit Site
+                        </button>
+                      </a>
+
+                      <button
+                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                      >
+                        View More
+                      </button>
+                    </div>
+                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard1 bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
+                    <img
+                      src="./images/wanderlinx.png"
                       alt=""
                       className="w-full rounded-2xl"
                     />

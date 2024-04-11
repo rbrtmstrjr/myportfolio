@@ -251,7 +251,7 @@ export default function App() {
                 className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                200 +
+                150 +
               </h2>
             </div>
             <p className="text-white/50 text-sm mt-2">

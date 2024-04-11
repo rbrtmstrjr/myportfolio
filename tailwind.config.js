@@ -8,11 +8,12 @@ export default {
     },
     extend: {
       backgroundImage: {
-        aboutme: "url('/images/img8.jpg')",
+        aboutme: "url('/images/me.jpg')",
         gamer: "url('/images/gamer_bg.jpg')",
         designer: "url('/images/designers.jpg')",
         developer: "url('/images/devs.jpg')",
         dashboard: "url('/images/web_sample.png')",
+        dashboard1: "url('/images/web_sample_bg.png')",
       },
 
       colors: {

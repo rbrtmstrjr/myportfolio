@@ -65,9 +65,14 @@ export default function AboutMe({
   return (
     <>
       <section className="flex flex-col xl:flex-row bg-secondary/10" id="id4">
-        <div className="w-full h-auto xl:w-1/2 pl-20 py-32">
-          <div className="bg-aboutme bg-cover bg-center grayscale opacity-80 hover:opacity-100 transition duration-500 hover:grayscale-0 h-full w-full rounded-2xl"></div>
+        <div className="w-full xl:w-1/2 py-0 xl:py-32 pl-0 xl:pr-0 xl:pl-20">
+          <img
+            src="./images/me.jpg"
+            className="h-full w-full object-cover rounded-none xl:rounded-2xl "
+            alt=""
+          />
         </div>
+
         <div className="w-full xl:w-1/2 flex flex-col gap-4 py-12 xl:py-32 pr-4 xl:pr-20 pl-4 xl:pl-8">
           <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
             ABOUT ME
