@@ -251,7 +251,7 @@ export default function App() {
       />
       <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md">
         <div
-          className="flex flex-col xl:flex-row gap-12 xl:gap-16"
+          className="flex flex-col xl:flex-row gap-16 xl:gap-16"
           data-aos="fade-right"
         >
           <div className="w-full xl:w-1/4 flex items-center flex-col">
