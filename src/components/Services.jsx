@@ -5,7 +5,7 @@ const services = [
   {
     id: 1,
     icon: "iconoir:web-window",
-    title: "Web Design",
+    title: "WEB DESIGN",
     description:
       "Transforming visions into captivating and responsive websites that engage and inspire. ",
     url: "#",
@@ -13,7 +13,7 @@ const services = [
   {
     id: 2,
     icon: "mingcute:code-line",
-    title: "Web Development",
+    title: "WEB DEVELOPMENT",
     description:
       "Build and maintain websites, creating functionality which help businesses promote thier product.",
     url: "#",
@@ -21,7 +21,7 @@ const services = [
   {
     id: 3,
     icon: "f7:rectangle-grid-1x2",
-    title: "UI / UX Design",
+    title: "UI / UX DESIGN",
     description:
       "Optimizing user experience, creating intuitive interfaces and ensuring its smooth interactions.",
     url: "#",
@@ -29,7 +29,7 @@ const services = [
   {
     id: 4,
     icon: "streamline:pen-tool",
-    title: "Graphics Design",
+    title: "GRAPHICS DESIGN",
     description:
       "Creating visual concept for a variety of projects, such as advertisements, logos and other digital prints.",
     url: "#",
@@ -37,7 +37,7 @@ const services = [
   {
     id: 5,
     icon: "ion:images-outline",
-    title: "Photo Editing",
+    title: "PHOTO EDITING",
     description:
       "Manipulate and enhance images to improve their quality and create visually appealing compositions.",
     url: "#",
@@ -45,7 +45,7 @@ const services = [
   {
     id: 6,
     icon: "radix-icons:camera",
-    title: "Photography",
+    title: "PHOTOGRAPHY",
     description:
       "Capture and create images to document events, tell stories, evoke emotions, or convey messages visually.",
     url: "#",
@@ -91,7 +91,7 @@ export default function Services({
         >
           {services.map((services) => (
             <div
-              className={`w-full xl:w-1/4 flex-grow flex flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
+              className={`w-full xl:w-1/4 flex-grow flex gap-2 flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
               key={services.id}
             >
               <Icon
@@ -102,10 +102,12 @@ export default function Services({
               <h3 className="text-slate-300 font-primary text-xl 2xl:text-2xl mt-8">
                 {services.title}
               </h3>
-              <p className="text-white/50 text-sm">{services.description}</p>
+              <p className="text-darkGray text-sm leading-6">
+                {services.description}
+              </p>
 
               <button
-                className={`${showBgHoverAccent} w-28 mt-4 hover:transition hover:duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                className={`${showBgHoverAccent} w-28 mt-4 hover:transition hover:duration-300 hover:text-primary px-5 py-3 border border-darkGray/50 text-darkGray text-xs rounded-lg`}
                 onClick={() => openModal(services.id)}
               >
                 View Sample
@@ -130,10 +132,10 @@ export default function Services({
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Action Coach Dame County
                     </h2>
-                    <p className="text-white/60 font-secondary text-sm">
+                    <p className="text-white/60 font-secondary text-sm leading-6">
                       (Coaching Website)
                     </p>
-                    <p className="text-white/60 font-secondary text-sm">
+                    <p className="text-white/60 font-secondary text-sm leading-6">
                       Action Coach Dane County is a coaching business that you
                       can rely on to guide you to increased profit and operating
                       efficiencies.
@@ -196,10 +198,10 @@ export default function Services({
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Wanderlinx
                     </h2>
-                    <p className="text-white/60 font-secondary text-sm">
+                    <p className="text-white/60 font-secondary text-sm leading-6">
                       (Travel Services)
                     </p>
-                    <p className="text-white/60 font-secondary text-sm">
+                    <p className="text-white/60 font-secondary text-sm leading-6">
                       Wanderlinx is a platform streamlines operates for travel
                       agents, handling ticket bookings across agencies while
                       preserving and enhancing brand identities.

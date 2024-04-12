@@ -30,6 +30,7 @@ export default {
         accent22: "#c8fff2",
         accent33: "#ffdbc9",
         accent44: "#dbceff",
+        darkGray: "#7C8094",
       },
       letterSpacing: {
         mini_stretch: "0.4em",

@@ -228,7 +228,7 @@ export default function App() {
       <nav className="flex justify-between px-4 lg:px-20 pt-4" id="id1">
         <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
         <div
-          className={`text-white/50 hover:cursor-pointer flex items-center gap-6 text-xs`}
+          className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
         >
           <a href="./images/maestro_robert_resume.pdf" target="_blank">
             <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
@@ -264,7 +264,7 @@ export default function App() {
                 150 +
               </h2>
             </div>
-            <p className="text-white/50 text-sm mt-2">
+            <p className="text-darkGray text-sm mt-2 leading-6">
               Website For Businesses Created
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function App() {
                 100 +
               </h2>
             </div>
-            <p className="text-white text-white/50 text-sm mt-2">
+            <p className="text-darkGray text-sm mt-2 leading-6">
               Existing Website Redesigned
             </p>
           </div>
@@ -292,7 +292,7 @@ export default function App() {
                 2 Years
               </h2>
             </div>
-            <p className="text-white text-white/50 text-sm mt-2">
+            <p className="text-darkGray text-sm mt-2 leading-6">
               Solid Web Design Experience
             </p>
           </div>
@@ -306,7 +306,7 @@ export default function App() {
                 1 Year
               </h2>
             </div>
-            <p className="text-white text-white/50 text-sm mt-2">
+            <p className="text-darkGray text-sm mt-2 leading-6">
               Graphic Design Experience
             </p>
           </div>
@@ -365,12 +365,17 @@ export default function App() {
                         icon="ph:quotes-fill"
                         className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
                       />
-                      <p className="text-white/50 text-sm">{data.feedback}</p>
+                      <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
+                      <p className="text-darkGray text-sm leading-6">
+                        {data.feedback}
+                      </p>
                       <div>
                         <h1 className="text-2xl font-primary text-slate-300">
                           {data.name}
                         </h1>
-                        <p className="text-white/50 text-sm">{data.position}</p>
+                        <p className="text-darkGray text-sm leading-6">
+                          {data.position}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -410,7 +415,7 @@ export default function App() {
               <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
                 Get in Touch
               </h2>
-              <p className="text-gray-400 text-sm leading-6">
+              <p className="text-darkGray text-sm leading-6">
                 Thank you for exploring my portfolio! If you have any questions,
                 collaboration ideas, or just want to connect, Id love to hear
                 from you. Here are some various ways to get in touch, Feel free
@@ -433,7 +438,7 @@ export default function App() {
                   className={`${showTextAccent} text-3xl`}
                 />
                 <div className="ml-6">
-                  <h3 className="text-gray-400 font-secondary">
+                  <h3 className="text-darkGray font-secondary">
                     robertmaestro09@gmail.com
                   </h3>
                 </div>
@@ -444,7 +449,7 @@ export default function App() {
                   className={`${showTextAccent} text-3xl`}
                 />
                 <div className="ml-6">
-                  <h3 className="text-gray-400 font-secondary">
+                  <h3 className="text-darkGray font-secondary">
                     Mansalay, Oriental Mindoro
                   </h3>
                 </div>
@@ -491,7 +496,7 @@ export default function App() {
                     />
                   </form>
                 ) : (
-                  <p>
+                  <p className="leading-6">
                     Thanks for reaching me out. I will response as soon as
                     possible!
                   </p>
@@ -513,7 +518,7 @@ export default function App() {
             >
               <Icon
                 icon={social.icon}
-                className={`text-white/30 text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
+                className={`text-darkGray text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
                 key={social.id}
               />
             </a>
@@ -522,7 +527,7 @@ export default function App() {
         <h3 className="text-slate-300 font-bold mt-4">
           Robert Maestro Jr. | Portfolio 2024
         </h3>
-        <p className="text-sm text-gray-400 pb-8">
+        <p className="text-sm text-darkGray pb-8 leading-6">
           Made With Pure Hardwork And Love.
         </p>
       </footer>

@@ -6,10 +6,10 @@ import "react-tooltip/dist/react-tooltip.css";
 let profileData = [
   {
     id: 1,
-    title: "Skills",
+    title: "SKILLS",
   },
-  { id: 2, title: "Experience" },
-  { id: 3, title: "Certifications" },
+  { id: 2, title: "EXPERIENCE" },
+  { id: 3, title: "CERTIFICATION" },
 ];
 
 const dataIcon = [
@@ -84,13 +84,13 @@ export default function AboutMe({
           <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
             Hi Im Rajon
           </h2>
-          <p className="text-white/50 text-sm">
+          <p className="text-darkGray text-sm leading-6">
             A dynamic designer with a passion for creating visually stunning
             digital experiences. With two years of experience as a web designer
             and an additional year specializing in graphic design, I can bring a
             unique blend of creativity and technical expertise to your projects.
           </p>
-          <ul className="flex gap-5 xl:gap-8 text-slate-300">
+          <ul className="flex gap-5 xl:gap-8 text-slate-300 text-sm">
             {profileData.map((data, index) => (
               <li
                 key={index}
@@ -110,10 +110,10 @@ export default function AboutMe({
               </li>
             ))}
           </ul>
-          <ul className="text-white/50 p-8 xl:p-10 bg-secondary/20 rounded-2xl mt-6">
+          <ul className="text-darkGray p-8 xl:p-10 bg-secondary/20 rounded-2xl mt-6">
             {profile === 1 && (
               <div className="text-sm">
-                <h1 className="mb-3 text-slate-300">Design Tools</h1>
+                <h1 className="mb-3 text-darkGray">Design Tools</h1>
                 <div className="flex flex-grow flex-wrap gap-4 ">
                   <Icon
                     icon="simple-icons:adobephotoshop"
@@ -139,7 +139,7 @@ export default function AboutMe({
                     Figma
                   </Tooltip>
                 </div>
-                <h1 className="mb-3 mt-6 text-slate-300">Development Tools</h1>
+                <h1 className="mb-3 mt-6 text-darkGray">Development Tools</h1>
                 <div className="flex flex-grow flex-wrap gap-4">
                   {dataIcon.map((data) => (
                     <div key={data.id}>
@@ -202,10 +202,10 @@ export default function AboutMe({
                     </h4>
                   </div>
                   <div className="ml-6 mb-6 mt-1">
-                    <p className={`${showTextAccent} text-sm`}>
+                    <p className={`${showTextAccent} text-sm leading-6`}>
                       April 2022 - February 2024
                     </p>
-                    <p className="text-sm mt-3">
+                    <p className="text-sm mt-3 leading-6">
                       Crafting visually stunning and highly functional websites
                       tailored to meet the unique needs of businesses using Thyv
                       CMS.
@@ -222,10 +222,10 @@ export default function AboutMe({
                     </h4>
                   </div>
                   <div className="ml-6 mb-6 mt-1">
-                    <p className={`${showTextAccent} text-sm`}>
+                    <p className={`${showTextAccent} text-sm leading-6`}>
                       September 2020 - November 2021
                     </p>
-                    <p className="text-sm mt-3">
+                    <p className="text-sm mt-3 leading-6">
                       Creating Design for T-Shirt, Tarpaulin and Other Digital
                       Prints. Also Maintain and Troubleshoot Printers.
                     </p>
@@ -246,14 +246,18 @@ export default function AboutMe({
                     Bachelor of Science In Information Technology <br />{" "}
                     (Mindoro State University)
                   </h4>
-                  <p className={`${showTextAccent} text-sm`}>2015 - 2020</p>
+                  <p className={`${showTextAccent} text-sm leading-6`}>
+                    2015 - 2020
+                  </p>
                 </div>
                 <div className="flex gap-2 flex-col">
                   <h4 className="-mt-2 text-slate-300">
                     Monthly Design Contest | Personiv Manila
                     <br /> (1st Place)
                   </h4>
-                  <p className={`${showTextAccent} text-sm`}>January 2023</p>
+                  <p className={`${showTextAccent} text-sm leading-6`}>
+                    January 2023
+                  </p>
                 </div>
               </div>
             )}

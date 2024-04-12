@@ -75,7 +75,7 @@ export default function Home({
                 <h1 className="outline-title leading-none tracking-expand text-8xl xl:text-9xl font-primary opacity-70 -mt-[85px] xl:-mt-28 ml-2 z-20">
                   R4JON
                 </h1>
-                <p className="text-white/60 font-secondary text-sm pr-0 2xl:pr-28">
+                <p className="text-darkGray font-secondary text-sm pr-0 2xl:pr-28 leading-6">
                   A creative web designer, I craft digital experiences that
                   leave a lasting impression. With a keen eye for aesthetics and
                   a knack for turning ideas into stunning websites, I bring your
@@ -92,7 +92,7 @@ export default function Home({
                     </button>
                   </a>
                 </div>
-                <div className="flex items-center gap-2 xl:gap-4 text-4xl text-white/50">
+                <div className="flex items-center gap-2 xl:gap-4 text-4xl text-darkGray">
                   {socialMedia.map((social) => (
                     <a
                       href={social.url}
