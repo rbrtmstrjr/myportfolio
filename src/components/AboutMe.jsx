@@ -95,15 +95,15 @@ export default function AboutMe({
               <li
                 key={index}
                 className={`${
-                  profile === data.id ? `font-bold ${showTextAccent}` : ""
-                } cursor-pointer`}
+                  profile === data.id ? `${showTextAccent}` : ""
+                } cursor-pointer font-primary`}
                 onClick={() => getProfileDescription(data.id)}
               >
                 {data.title}
                 <div
                   className={
                     profile === data.id
-                      ? `absolute h-1 w-10 ${showAccent} rounded-md mt-3`
+                      ? `absolute h-1 w-10 ${showAccent} rounded-md mt-1`
                       : "hidden"
                   }
                 ></div>
@@ -155,32 +155,32 @@ export default function AboutMe({
                 </div>
                 <div className="flex flex-grow flex-wrap mt-10 gap-3 text-xs">
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Problem Solver
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Teamwork
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Adaptability
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Creative
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Flexibility
                   </span>
                   <span
-                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-bold`}
+                    className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                   >
                     Time Management
                   </span>

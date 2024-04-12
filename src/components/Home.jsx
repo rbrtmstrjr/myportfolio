@@ -82,7 +82,7 @@ export default function Home({
                   online vision to life.
                 </p>
               </div>
-              <div className="flex gap-3 xl:gap-6">
+              <div className="flex gap-3 xl:gap-8">
                 <div className="">
                   <a href="#id6">
                     <button
@@ -92,7 +92,7 @@ export default function Home({
                     </button>
                   </a>
                 </div>
-                <div className="flex items-center gap-2 2xl:gap-4 text-4xl text-white/50">
+                <div className="flex items-center gap-4 2xl:gap-4 text-4xl text-white/50">
                   {socialMedia.map((social) => (
                     <a
                       href={social.url}

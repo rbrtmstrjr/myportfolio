@@ -332,7 +332,10 @@ export default function App() {
         <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
           FEEDBACK
         </label>
-        <h2 className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8">
+        <h2
+          className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
+          data-aos="fade-down"
+        >
           What Others Say?
         </h2>
         <div className="flex mt-12 xl:mt-16">
