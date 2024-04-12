@@ -37,7 +37,10 @@ export default function Home({
         </div>
         <div className="px-4 xl:px-20">
           <article className="flex flex-col md:flex-row py-6 2xl:py-20 z-10">
-            <div className="w-full 2xl:w-1/2 flex flex-col justify-center items-center z-10 relative">
+            <div
+              className="w-full 2xl:w-1/2 flex flex-col justify-center items-center z-10 relative"
+              data-aos="fade-right"
+            >
               <div className="flex text-xs absolute -left-2 -m-24 rotate-90">
                 <h1 className="tracking-stretch">SCROLL</h1>
                 <h1>- - - - - - - - - - - - - -</h1>
@@ -61,7 +64,10 @@ export default function Home({
                 />
               ))}
             </div>
-            <div className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30">
+            <div
+              className="w-full 2xl:w-1/2 flex flex-col gap-6 justify-center z-30"
+              data-aos="fade-left"
+            >
               <div>
                 <h1 className="relative leading-none tracking-expand text-7xl xl:text-9xl font-black font-primary z-30">
                   R<span className={accentTextColor}>4</span>JON

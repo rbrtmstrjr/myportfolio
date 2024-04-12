@@ -41,7 +41,7 @@ export default function Gallery() {
         />
       </div>
       <div className="overflow-hidden">
-        <div className="gallery">
+        <div className="gallery" data-aos="fade-up">
           {imgData.map((item, index) => (
             <div
               className="pics grayscale hover:grayscale-0 opacity-70 hover:opacity-100 hover:scale-105"

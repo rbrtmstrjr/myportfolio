@@ -70,10 +70,14 @@ export default function AboutMe({
             src="./images/me.jpg"
             className="h-full w-full object-cover rounded-none xl:rounded-2xl "
             alt=""
+            data-aos="fade-right"
           />
         </div>
 
-        <div className="w-full xl:w-1/2 flex flex-col gap-4 py-12 xl:py-32 pr-4 xl:pr-20 pl-4 xl:pl-8">
+        <div
+          className="w-full xl:w-1/2 flex flex-col gap-4 py-12 xl:py-32 pr-4 xl:pr-20 pl-4 xl:pl-8"
+          data-aos="fade-left"
+        >
           <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
             ABOUT ME
           </label>

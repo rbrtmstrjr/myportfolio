@@ -4,14 +4,17 @@ import Home from "./components/Home";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import AboutMe from "./components/AboutMe";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Aos from "aos";
 
 const socialMedia = [
   {
@@ -121,6 +124,10 @@ const testimonials = [
 ];
 
 export default function App() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const [showContact, setShowContact] = useState(true);
   const [showBgAccent, setShowAccent] = useState("bg-accent");
   const [showTextAccent, setShowTextAccent] = useState("text-accent");
@@ -243,7 +250,10 @@ export default function App() {
         socialMedia={socialMedia}
       />
       <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md">
-        <div className="flex flex-col xl:flex-row gap-12 xl:gap-16">
+        <div
+          className="flex flex-col xl:flex-row gap-12 xl:gap-16"
+          data-aos="fade-right"
+        >
           <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex flex-grow items-center gap-4">
               <Icon
@@ -387,7 +397,10 @@ export default function App() {
       >
         <div className="w-full max-w-screen-2xl">
           <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12">
+            <div
+              className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12"
+              data-aos="fade-right"
+            >
               <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
                 CONNECT
               </label>
@@ -434,7 +447,10 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400">
+            <div
+              className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400"
+              data-aos="fade-left"
+            >
               <div className="flex justify-center items-center">
                 {showContact ? (
                   <form
