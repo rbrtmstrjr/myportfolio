@@ -257,7 +257,7 @@ export default function App() {
           <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex flex-grow items-center gap-4">
               <Icon
-                icon="carbon:split-screen"
+                icon="iconoir:computer"
                 className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
@@ -285,7 +285,7 @@ export default function App() {
           <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
-                icon="iconoir:light-bulb"
+                icon="iconamoon:screen-full"
                 className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
@@ -299,8 +299,8 @@ export default function App() {
           <div className="w-full xl:w-1/4 flex items-center flex-col">
             <div className="flex items-center gap-4">
               <Icon
-                icon="teenyicons:grid-layout-outline"
-                className={`${showTextAccent} text-3xl`}
+                icon="ph:layout-duotone"
+                className={`${showTextAccent} text-4xl`}
               />
               <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
                 1 Year
