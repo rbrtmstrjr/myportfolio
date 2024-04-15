@@ -253,6 +253,7 @@ export default function App() {
       <Nav
         accentHoverBgColor={showHoverBgAccent}
         activeSection={activeSection}
+        showTextAccent={showTextAccent}
       />
       <ScrollTrigger onEnter={() => handleSectionEnter("home")}>
         <Home

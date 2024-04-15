@@ -30,20 +30,25 @@ const navigationList = [
   },
 ];
 
-export default function Nav({ accentHoverBgColor, activeSection }) {
+export default function Nav({
+  accentHoverBgColor,
+  activeSection,
+  showTextAccent,
+}) {
   return (
     <nav className="flex relative justify-center z-50">
       <div className="px-6 py-3 text-slate-300 bg-white/10 flex gap-4 text-2xl fixed rounded-full justify-center bottom-8 backdrop-blur">
         <ShowNavigation
           accentHoverBgColor={accentHoverBgColor}
           activeSection={activeSection}
+          showTextAccent={showTextAccent}
         />
       </div>
     </nav>
   );
 }
 
-function ShowNavigation({ accentHoverBgColor, activeSection }) {
+function ShowNavigation({ accentHoverBgColor, activeSection, showTextAccent }) {
   const getNavigation = navigationList;
   return (
     <>
@@ -51,7 +56,7 @@ function ShowNavigation({ accentHoverBgColor, activeSection }) {
         <a
           href={`#${nav.url}`}
           className={`${
-            activeSection === nav.url ? "text-accent" : "text-white/50"
+            activeSection === nav.url ? showTextAccent : "text-white/50"
           } ${accentHoverBgColor} rounded-md p-1 hover:text-tertiary hover:scale-110 transition`}
           key={nav.id}
         >
