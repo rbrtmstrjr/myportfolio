@@ -72,7 +72,7 @@ export default function Services({
 
   return (
     <div>
-      <section className="px-4 py-12 xl:px-20 xl:py-32 " id="id3">
+      <section className="px-4 py-12 xl:px-20 xl:py-32 " id="services">
         <div className="mb-4 xl:mb-16">
           <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
             WHAT I DO?

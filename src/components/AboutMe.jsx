@@ -64,7 +64,7 @@ export default function AboutMe({
 
   return (
     <>
-      <section className="flex flex-col xl:flex-row bg-secondary/10" id="id4">
+      <section className="flex flex-col xl:flex-row bg-secondary/10" id="about">
         <div className="w-full xl:w-1/2 py-0 xl:py-32 pl-0 xl:pr-0 xl:pl-20">
           <img
             src="./images/me.jpg"

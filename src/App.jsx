@@ -10,6 +10,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 //styles
 import "swiper/css";
@@ -125,9 +127,11 @@ const testimonials = [
 
 export default function App() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    AOS.init({ duration: 1000 });
   }, []);
 
+  const [counterOn, setCounterOn] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
   const [showContact, setShowContact] = useState(true);
   const [showBgAccent, setShowAccent] = useState("bg-accent");
   const [showTextAccent, setShowTextAccent] = useState("text-accent");
@@ -142,6 +146,10 @@ export default function App() {
 
   const [showAccentTab, setShowAccentTab] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const handleSectionEnter = (section) => {
+    setActiveSection(section);
+  };
 
   const changeAccent = (
     bgColor,
@@ -225,7 +233,7 @@ export default function App() {
         </div>
       )}
 
-      <nav className="flex justify-between px-4 lg:px-20 pt-4" id="id1">
+      <nav className="flex justify-between px-4 lg:px-20 pt-4" id="home">
         <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
         <div
           className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
@@ -242,270 +250,309 @@ export default function App() {
         </div>
       </nav>
 
-      <Nav accentHoverBgColor={showHoverBgAccent} />
-      <Home
-        accentBgColor={showBgAccent}
-        accentTextColor={showTextAccent}
-        accentHoverTextColor={showHoverTextAccent}
-        socialMedia={socialMedia}
+      <Nav
+        accentHoverBgColor={showHoverBgAccent}
+        activeSection={activeSection}
       />
-      <section className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md">
-        <div
-          className="flex flex-col xl:flex-row gap-16 xl:gap-16"
+      <ScrollTrigger onEnter={() => handleSectionEnter("home")}>
+        <Home
+          accentBgColor={showBgAccent}
+          accentTextColor={showTextAccent}
+          accentHoverTextColor={showHoverTextAccent}
+          socialMedia={socialMedia}
+          id="home"
+        />
+      </ScrollTrigger>
+
+      <ScrollTrigger
+        onEnter={() => setCounterOn(true)}
+        onExit={() => setCounterOn(false)}
+      >
+        <section
+          className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md"
           data-aos="fade-right"
         >
-          <div className="w-full xl:w-1/4 flex items-center flex-col">
-            <div className="flex flex-grow items-center gap-4">
-              <Icon
-                icon="iconoir:computer"
-                className={`${showTextAccent} text-4xl`}
-              />
-              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                150 +
-              </h2>
+          {counterOn && (
+            <div className="flex flex-col xl:flex-row gap-16 xl:gap-16">
+              <div className="w-full xl:w-1/4 flex items-center flex-col">
+                <div className="flex flex-grow items-center gap-4">
+                  <Icon
+                    icon="iconoir:computer"
+                    className={`${showTextAccent} text-4xl`}
+                  />
+
+                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                    <CountUp
+                      start={0}
+                      end={150}
+                      duration={1}
+                      delay={0}
+                    ></CountUp>{" "}
+                    +
+                  </h2>
+                </div>
+                <p className="text-darkGray text-sm mt-2 leading-6">
+                  Different Website Created
+                </p>
+              </div>
+              <div className="w-full xl:w-1/4 flex items-center flex-col">
+                <div className="flex items-center  gap-4">
+                  <Icon
+                    icon="mynaui:edit-one"
+                    className={`${showTextAccent} text-4xl`}
+                  />
+                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                    <CountUp
+                      start={0}
+                      end={100}
+                      duration={1}
+                      delay={0}
+                    ></CountUp>{" "}
+                    +
+                  </h2>
+                </div>
+                <p className="text-darkGray text-sm mt-2 leading-6">
+                  Existing Website Redesigned
+                </p>
+              </div>
+              <div className="w-full xl:w-1/4 flex items-center flex-col">
+                <div className="flex items-center gap-4">
+                  <Icon
+                    icon="iconamoon:screen-full"
+                    className={`${showTextAccent} text-4xl`}
+                  />
+                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                    <CountUp start={0} end={2} duration={1}></CountUp> Years
+                  </h2>
+                </div>
+                <p className="text-darkGray text-sm mt-2 leading-6">
+                  Solid Web Design Experience
+                </p>
+              </div>
+              <div className="w-full xl:w-1/4 flex items-center flex-col">
+                <div className="flex items-center gap-4">
+                  <Icon
+                    icon="ph:layout-duotone"
+                    className={`${showTextAccent} text-4xl`}
+                  />
+                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                    <CountUp start={0} end={1} duration={1}></CountUp> Year
+                  </h2>
+                </div>
+                <p className="text-darkGray text-sm mt-2 leading-6">
+                  Graphic Design Experience
+                </p>
+              </div>
             </div>
-            <p className="text-darkGray text-sm mt-2 leading-6">
-              Website For Businesses Created
-            </p>
-          </div>
-          <div className="w-full xl:w-1/4 flex items-center flex-col">
-            <div className="flex items-center  gap-4">
-              <Icon
-                icon="mynaui:edit-one"
-                className={`${showTextAccent} text-4xl`}
-              />
-              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                100 +
-              </h2>
-            </div>
-            <p className="text-darkGray text-sm mt-2 leading-6">
-              Existing Website Redesigned
-            </p>
-          </div>
-          <div className="w-full xl:w-1/4 flex items-center flex-col">
-            <div className="flex items-center gap-4">
-              <Icon
-                icon="iconamoon:screen-full"
-                className={`${showTextAccent} text-4xl`}
-              />
-              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                2 Years
-              </h2>
-            </div>
-            <p className="text-darkGray text-sm mt-2 leading-6">
-              Solid Web Design Experience
-            </p>
-          </div>
-          <div className="w-full xl:w-1/4 flex items-center flex-col">
-            <div className="flex items-center gap-4">
-              <Icon
-                icon="ph:layout-duotone"
-                className={`${showTextAccent} text-4xl`}
-              />
-              <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                1 Year
-              </h2>
-            </div>
-            <p className="text-darkGray text-sm mt-2 leading-6">
-              Graphic Design Experience
-            </p>
-          </div>
-        </div>
-      </section>
+          )}
+        </section>
+      </ScrollTrigger>
 
       <Gallery />
-      <Services
-        showTextAccent={showTextAccent}
-        showHoverAccent={showHoverTextAccent}
-        showBgHoverAccent={showHoverBgAccent}
-        showBgAccent={showBgAccent}
-        showLightAccent={showLightAccent}
-      />
-      <AboutMe
-        showAccent={showBgAccent}
-        showTextAccent={showTextAccent}
-        showHoverAccent={showHoverTextAccent}
-        showBorderAccent={showBorderAccent}
-      />
 
-      <section className="px-4 xl:px-20 py-12 xl:py-24" id="id5">
-        <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
-          FEEDBACK
-        </label>
-        <h2
-          className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
-          data-aos="fade-down"
-        >
-          What Others Say?
-        </h2>
-        <div className="flex mt-12 xl:mt-16">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            navigation={true}
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            pagination={{ clickable: true }}
-            style={{
-              "--swiper-pagination-color": "#fff",
-              "--swiper-pagination-bullet-inactive-color": "#ffffff",
-              "--swiper-pagination-bullet-inactive-opacity": "0.2",
-              "--swiper-pagination-bullet-size": "10px",
-            }}
+      <ScrollTrigger onEnter={() => handleSectionEnter("services")}>
+        <Services
+          showTextAccent={showTextAccent}
+          showHoverAccent={showHoverTextAccent}
+          showBgHoverAccent={showHoverBgAccent}
+          showBgAccent={showBgAccent}
+          showLightAccent={showLightAccent}
+        />
+      </ScrollTrigger>
+
+      <ScrollTrigger onEnter={() => handleSectionEnter("about")}>
+        <AboutMe
+          showAccent={showBgAccent}
+          showTextAccent={showTextAccent}
+          showHoverAccent={showHoverTextAccent}
+          showBorderAccent={showBorderAccent}
+        />
+      </ScrollTrigger>
+
+      <ScrollTrigger onEnter={() => handleSectionEnter("testimonials")}>
+        <section className="px-4 xl:px-20 py-12 xl:py-24" id="testimonials">
+          <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
+            FEEDBACK
+          </label>
+          <h2
+            className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
+            data-aos="fade-down"
           >
-            {testimonials.map((data) => (
-              <SwiperSlide key={data.id}>
-                <div className="flex flex-col-reverse xl:flex-row items-center">
-                  <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
-                    <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
-                      <Icon
-                        icon="ph:quotes-fill"
-                        className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
-                      />
-                      <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
-                      <p className="text-darkGray text-sm leading-6">
-                        {data.feedback}
-                      </p>
-                      <div>
-                        <h1 className="text-2xl font-primary text-slate-300">
-                          {data.name}
-                        </h1>
+            What Others Say?
+          </h2>
+          <div className="flex mt-12 xl:mt-16">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              navigation={true}
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              style={{
+                "--swiper-pagination-color": "#fff",
+                "--swiper-pagination-bullet-inactive-color": "#ffffff",
+                "--swiper-pagination-bullet-inactive-opacity": "0.2",
+                "--swiper-pagination-bullet-size": "10px",
+              }}
+            >
+              {testimonials.map((data) => (
+                <SwiperSlide key={data.id}>
+                  <div className="flex flex-col-reverse xl:flex-row items-center">
+                    <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
+                      <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
+                        <Icon
+                          icon="ph:quotes-fill"
+                          className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
+                        />
+                        <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
                         <p className="text-darkGray text-sm leading-6">
-                          {data.position}
+                          {data.feedback}
                         </p>
+                        <div>
+                          <h1 className="text-2xl font-primary text-slate-300">
+                            {data.name}
+                          </h1>
+                          <p className="text-darkGray text-sm leading-6">
+                            {data.position}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="w-full xl:w-1/2 rounded-2xl">
+                      <div
+                        className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-70 rounded-2xl overflow-hidden`}
+                      >
+                        <img
+                          src={data.imgUrl}
+                          className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>
+                </SwiperSlide>
+              ))}
+              <div className="mt-12">...</div>
+            </Swiper>
+          </div>
+        </section>
+      </ScrollTrigger>
 
-                  <div className="w-full xl:w-1/2 rounded-2xl">
-                    <div
-                      className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-70 rounded-2xl overflow-hidden`}
-                    >
-                      <img
-                        src={data.imgUrl}
-                        className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
-                        alt=""
-                      />
-                    </div>
+      <ScrollTrigger onEnter={() => handleSectionEnter("contact")}>
+        <section
+          className="flex justify-center bg-secondary/10 items-center px-6 py-12 md:px-20 md:py-24 "
+          id="contact"
+        >
+          <div className="w-full max-w-screen-2xl">
+            <div className="flex flex-col md:flex-row">
+              <div
+                className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12"
+                data-aos="fade-right"
+              >
+                <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
+                  CONNECT
+                </label>
+                <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
+                  Get in Touch
+                </h2>
+                <p className="text-darkGray text-sm leading-6">
+                  Thank you for exploring my portfolio! If you have any
+                  questions, collaboration ideas, or just want to connect, Id
+                  love to hear from you. Here are some various ways to get in
+                  touch, Feel free to call me or drop me an email. I am excited
+                  to connect with you.
+                </p>
+                <div className="flex gap-2">
+                  <div
+                    className={`w-10 rounded-full p-1 ${showBgAccent}`}
+                  ></div>
+                  <div
+                    className={`w-4 rounded-full p-1 bg-opacity-60 ${showBgAccent}`}
+                  ></div>
+                  <div
+                    className={`w-2 rounded-full p-1  bg-opacity-40 ${showBgAccent}`}
+                  ></div>
+                </div>
+
+                <div className="flex items-center mt-6">
+                  <Icon
+                    icon="mage:email"
+                    className={`${showTextAccent} text-3xl`}
+                  />
+                  <div className="ml-6">
+                    <h3 className="text-darkGray font-secondary">
+                      robertmaestro09@gmail.com
+                    </h3>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-            <div className="mt-12">...</div>
-          </Swiper>
-        </div>
-      </section>
-
-      <section
-        className="flex justify-center bg-secondary/10 items-center px-6 py-12 md:px-20 md:py-24 "
-        id="id6"
-      >
-        <div className="w-full max-w-screen-2xl">
-          <div className="flex flex-col md:flex-row">
-            <div
-              className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12"
-              data-aos="fade-right"
-            >
-              <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
-                CONNECT
-              </label>
-              <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
-                Get in Touch
-              </h2>
-              <p className="text-darkGray text-sm leading-6">
-                Thank you for exploring my portfolio! If you have any questions,
-                collaboration ideas, or just want to connect, Id love to hear
-                from you. Here are some various ways to get in touch, Feel free
-                to call me or drop me an email. I am excited to connect with
-                you.
-              </p>
-              <div className="flex gap-2">
-                <div className={`w-10 rounded-full p-1 ${showBgAccent}`}></div>
-                <div
-                  className={`w-4 rounded-full p-1 bg-opacity-60 ${showBgAccent}`}
-                ></div>
-                <div
-                  className={`w-2 rounded-full p-1  bg-opacity-40 ${showBgAccent}`}
-                ></div>
-              </div>
-
-              <div className="flex items-center mt-6">
-                <Icon
-                  icon="mage:email"
-                  className={`${showTextAccent} text-3xl`}
-                />
-                <div className="ml-6">
-                  <h3 className="text-darkGray font-secondary">
-                    robertmaestro09@gmail.com
-                  </h3>
+                <div className="flex items-center">
+                  <Icon
+                    icon="fluent:location-12-regular"
+                    className={`${showTextAccent} text-3xl`}
+                  />
+                  <div className="ml-6">
+                    <h3 className="text-darkGray font-secondary">
+                      Mansalay, Oriental Mindoro
+                    </h3>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Icon
-                  icon="fluent:location-12-regular"
-                  className={`${showTextAccent} text-3xl`}
-                />
-                <div className="ml-6">
-                  <h3 className="text-darkGray font-secondary">
-                    Mansalay, Oriental Mindoro
-                  </h3>
+              <div
+                className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400"
+                data-aos="fade-left"
+              >
+                <div className="flex justify-center items-center">
+                  {showContact ? (
+                    <form
+                      onSubmit={sendEmail}
+                      className="w-full flex flex-col gap-6"
+                    >
+                      <input
+                        type="text"
+                        name="name"
+                        className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                        placeholder="Name"
+                        required
+                      />
+
+                      <input
+                        type="email"
+                        name="user_email"
+                        className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                        placeholder="Email"
+                        required
+                      />
+
+                      <textarea
+                        type="text"
+                        name="message"
+                        className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
+                        placeholder="Message"
+                        required
+                      />
+
+                      <input
+                        type="submit"
+                        className={`w-24 text-primary text-sm ${showBgAccent} p-2 rounded-lg cursor-pointer`}
+                        value="Send"
+                      />
+                    </form>
+                  ) : (
+                    <p className="leading-6">
+                      Thanks for reaching me out. I will response as soon as
+                      possible!
+                    </p>
+                  )}
                 </div>
-              </div>
-            </div>
-            <div
-              className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400"
-              data-aos="fade-left"
-            >
-              <div className="flex justify-center items-center">
-                {showContact ? (
-                  <form
-                    onSubmit={sendEmail}
-                    className="w-full flex flex-col gap-6"
-                  >
-                    <input
-                      type="text"
-                      name="name"
-                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                      placeholder="Name"
-                      required
-                    />
-
-                    <input
-                      type="email"
-                      name="user_email"
-                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                      placeholder="Email"
-                      required
-                    />
-
-                    <textarea
-                      type="text"
-                      name="message"
-                      className="px-5 py-3 bg-slate-200 text-sm text-primary rounded-lg w-full"
-                      placeholder="Message"
-                      required
-                    />
-
-                    <input
-                      type="submit"
-                      className={`w-24 text-primary text-sm ${showBgAccent} p-2 rounded-lg cursor-pointer`}
-                      value="Send"
-                    />
-                  </form>
-                ) : (
-                  <p className="leading-6">
-                    Thanks for reaching me out. I will response as soon as
-                    possible!
-                  </p>
-                )}
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollTrigger>
 
       <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col">
         <div className="flex justify-center gap-4">
