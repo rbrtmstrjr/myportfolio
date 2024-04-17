@@ -506,7 +506,7 @@ export default function App() {
                 className="w-full md:w-2/5 mt-8 md:mt-0 bg-secondary/20  rounded-2xl p-8 md:p-12 text-gray-400"
                 data-aos="fade-left"
               >
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center w-full h-full">
                   {showContact ? (
                     <form
                       onSubmit={sendEmail}
@@ -543,7 +543,7 @@ export default function App() {
                       />
                     </form>
                   ) : (
-                    <p className="leading-6">
+                    <p className="leading-6 w-full h-full border">
                       Thanks for reaching me out. I will response as soon as
                       possible!
                     </p>

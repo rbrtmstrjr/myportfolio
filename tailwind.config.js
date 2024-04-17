@@ -14,6 +14,7 @@ export default {
         developer: "url('/images/devs.jpg')",
         dashboard: "url('/images/web_sample.png')",
         dashboard1: "url('/images/web_sample_bg.png')",
+        dashboard2: "url('/images/web_ui.png')",
       },
 
       colors: {

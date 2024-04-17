@@ -267,6 +267,81 @@ export default function Services({
                   </div>
                 </div>
               )}
+
+              {isServices === 3 && (
+                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                    <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
+                      2024 Portfolio
+                    </h2>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      (Online Portfolio)
+                    </p>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      A compilation detailing all the projects from wireframing
+                      to prototyping to development.
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs mt-4">
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Figma
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        React Js
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Tailwind Css
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Minimal
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Responsive
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Darkmode
+                      </span>
+                    </div>
+                    <div className="flex gap-3 mt-2 xl:mt-8">
+                      <a
+                        href="https://www.figma.com/file/6nq6bq1exrU0ngZZfXtXYS/Portfolio-2024?type=design&node-id=0%3A1&mode=design&t=qsW7ECYU1WmUhiYA-1"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <button
+                          className={`${showBgAccent} transition duration-300 px-4 py-3 border border-slate-300/20 text-primary text-xs rounded-lg`}
+                        >
+                          Visit Figma File
+                        </button>
+                      </a>
+
+                      <button
+                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                      >
+                        View More
+                      </button>
+                    </div>
+                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard2 bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
+                    <img
+                      src="./images/uiux.png"
+                      alt=""
+                      className="w-full rounded-2xl"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
