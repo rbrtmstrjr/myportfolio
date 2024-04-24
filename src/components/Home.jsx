@@ -48,7 +48,7 @@ export default function Home({
               <div
                 className={` ${
                   showBg
-                    ? `opacity-100 absolute z-0 mix-blend-screen rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-3 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-9 2xl:-mt-4 w-32 h-32 xl:w-40 xl:h-40`
+                    ? `opacity-100 absolute z-0 rounded-full transition-opacity duration-300 ${accentBgColor} bg-opacity-70 -ml-3 xl:-ml-8 2xl:-ml-14 mt-6 xl:mt-9 2xl:-mt-1 w-32 h-32 xl:w-40 xl:h-40`
                     : "opacity-80"
                 } `}
               ></div>
