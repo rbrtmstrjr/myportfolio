@@ -75,13 +75,13 @@ export default function Services({
       <section className="px-4 py-12 xl:px-20 xl:py-32 " id="services">
         <div className="mb-4 xl:mb-16">
           <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
-            WHAT I DO?
+            MY SKILLS
           </label>
           <h2
             className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
             data-aos="fade-down"
           >
-            Services Offered
+            What I Do?
           </h2>
         </div>
 
@@ -130,15 +130,15 @@ export default function Services({
                 <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
                   <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
-                      Action Coach Dame County
+                      Innervate Chiropractic
                     </h2>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      (Coaching Website)
+                      (Chiropractor Website)
                     </p>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      Action Coach Dane County is a coaching business that you
-                      can rely on to guide you to increased profit and operating
-                      efficiencies.
+                      Innervate Chiropractic, led by Dr. Dean in Oklahoma City,
+                      OK, is committed to enhancing patients' well-being through
+                      personalized chiropractic care.
                     </p>
                     <div className="flex flex-wrap gap-3 text-xs mt-4">
                       <span
@@ -149,8 +149,9 @@ export default function Services({
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Coaching Website
+                        Wellness
                       </span>
+
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
@@ -161,10 +162,15 @@ export default function Services({
                       >
                         Minimal
                       </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Informative
+                      </span>
                     </div>
                     <div className="flex gap-3 mt-2 xl:mt-8">
                       <a
-                        href="https://siteeditor.thryv.com/preview/9e3e8c25"
+                        href="https://www.innervatechiropractic.com/"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -184,7 +190,7 @@ export default function Services({
                   </div>
                   <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
                     <img
-                      src="./images/res.png"
+                      src="./images/macbook.png"
                       alt=""
                       className="w-full rounded-2xl"
                     />
