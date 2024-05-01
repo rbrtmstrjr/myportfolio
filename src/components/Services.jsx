@@ -1,5 +1,9 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import {
+  ReactCompareSlider,
+  ReactCompareSliderImage,
+} from "react-compare-slider";
 
 const services = [
   {
@@ -127,7 +131,7 @@ export default function Services({
           <div className="bg-tertiary w-11/12 xl:w-4/5 mx-auto rounded-2xl shadow-xl z-50">
             <div>
               {isServices === 1 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                <div className="flex flex-col-reverse xl:flex-row gap-0">
                   <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Innervate Chiropractic
@@ -199,7 +203,7 @@ export default function Services({
               )}
 
               {isServices === 2 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                <div className="flex flex-col-reverse xl:flex-row gap-0">
                   <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Wanderlinx
@@ -275,7 +279,7 @@ export default function Services({
               )}
 
               {isServices === 3 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0 xl:gap-8">
+                <div className="flex flex-col-reverse xl:flex-row gap-0">
                   <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       2024 Portfolio
@@ -344,6 +348,77 @@ export default function Services({
                       src="./images/uiux.png"
                       alt=""
                       className="w-full rounded-2xl"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {isServices === 5 && (
+                <div className="flex flex-col-reverse xl:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                    <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
+                      Birthday Poster
+                    </h2>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      (Photo Editing)
+                    </p>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      A birthday poster for Jorelyn's 7th birthday,
+                      incorporating an enchanted ambiance with subtle pastel
+                      hues, as requested by the client.
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs mt-4">
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Photoshop
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Remini
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Generative Fill
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Enchanted
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Pastel
+                      </span>
+                    </div>
+                    <div className="flex gap-3 mt-2 xl:mt-8">
+                      <button
+                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                      >
+                        View More
+                      </button>
+                    </div>
+                  </div>
+                  <div className="w-full h-auto xl:w-3/5">
+                    <ReactCompareSlider
+                      className="w-full h-full object-cover rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"
+                      itemOne={
+                        <ReactCompareSliderImage
+                          src="./images/sample_image1.jpg"
+                          srcSet="./images/sample_image1.jpg"
+                          alt="Image one"
+                        />
+                      }
+                      itemTwo={
+                        <ReactCompareSliderImage
+                          src="./images/before.jpg"
+                          srcSet="./images/before.jpg"
+                          alt="Image two"
+                        />
+                      }
                     />
                   </div>
                 </div>

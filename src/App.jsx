@@ -461,11 +461,10 @@ export default function App() {
                   Get in Touch
                 </h2>
                 <p className="text-darkGray text-sm leading-6">
-                  Thank you for exploring my portfolio! If you have any
-                  questions, collaboration ideas, or just want to connect, Id
-                  love to hear from you. Here are some various ways to get in
-                  touch, Feel free to call me or drop me an email. I am excited
-                  to connect with you.
+                  Thank you for taking the time to explore my portfolio! If you
+                  have any inquiries, collaboration proposals, or simply wish to
+                  connect, I would love to hear from you. Please don't hesitate
+                  to reach out. I'm eager to connect with you.
                 </p>
                 <div className="flex gap-2">
                   <div
@@ -555,29 +554,46 @@ export default function App() {
         </section>
       </ScrollTrigger>
 
-      <footer className="px-6 py-12 md:px-32 md:py-12 flex justify-center items-center flex-col">
-        <div className="flex justify-center gap-4">
-          {socialMedia.map((social) => (
+      <footer className="px-6 py-12 md:px-32 md:py-24">
+        <div className="flex flex-col gap-10 items-center">
+          <h2 className="text-3xl xl:text-5xl font-primary text-slate-300">
+            Want to know More?
+          </h2>
+          <div className="flex flex-col justify-center items-center gap-4">
             <a
-              href={social.url}
+              href="./images/maestro_robert_resume.pdf"
               target="_blank"
-              rel="noreferrer"
-              key={social.id}
+              className={`${showBgAccent} hover:transition hover:duration-300 hover:scale-110 px-5 py-3 text-primary rounded-lg`}
             >
-              <Icon
-                icon={social.icon}
-                className={`text-darkGray text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
-                key={social.id}
-              />
+              Download Resume
             </a>
-          ))}
+            <p className="text-white mx-2">or visit</p>
+            <div className="flex gap-4">
+              {socialMedia.map((social) => (
+                <a
+                  href={social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={social.id}
+                >
+                  <Icon
+                    icon={social.icon}
+                    className={`text-darkGray text-4xl ${showHoverTextAccent} hover:scale-125 transition`}
+                    key={social.id}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="text-slate-300 font-bold">
+              Robert Maestro Jr. | Portfolio 2024
+            </h3>
+            <p className="text-sm text-darkGray leading-6">
+              Made With Pure Hardwork And Love.
+            </p>
+          </div>
         </div>
-        <h3 className="text-slate-300 font-bold mt-4">
-          Robert Maestro Jr. | Portfolio 2024
-        </h3>
-        <p className="text-sm text-darkGray pb-8 leading-6">
-          Made With Pure Hardwork And Love.
-        </p>
       </footer>
     </div>
   );
