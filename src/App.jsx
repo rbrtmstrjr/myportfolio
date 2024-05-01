@@ -429,6 +429,7 @@ export default function App() {
                       >
                         <img
                           src={data.imgUrl}
+                          loading="lazy"
                           className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
                           alt=""
                         />

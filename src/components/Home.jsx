@@ -33,7 +33,12 @@ export default function Home({
     <>
       <main className=" text-slate-300 relative overflow-hidden">
         <div className="absolute flex items-center">
-          <img src={bg} alt="" className="w-4/5 h-screen opacity-5" />
+          <img
+            src={bg}
+            alt=""
+            loading="lazy"
+            className="w-4/5 h-screen opacity-5"
+          />
         </div>
         <div className="px-4 xl:px-20">
           <article className="flex flex-col md:flex-row py-6 2xl:py-20 z-10">
@@ -57,6 +62,7 @@ export default function Home({
                 <img
                   src={card.profile}
                   alt=""
+                  loading="lazy"
                   className={`${
                     card.id === active ? "opacity-100" : "opacity-0 absolute"
                   } mt-2 2xl:mt-0 w-4/5 xl:w-3/5 z-10 transition-opacity duration-500`}

@@ -192,13 +192,7 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
-                    <img
-                      src="./images/macbook.png"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
-                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
                 </div>
               )}
 
@@ -268,13 +262,7 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard1 bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
-                    <img
-                      src="./images/wanderlinx.png"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
-                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-wanderlinx bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
                 </div>
               )}
 
@@ -343,13 +331,7 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard2 bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl">
-                    <img
-                      src="./images/uiux.png"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
-                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-uiux bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
                 </div>
               )}
 
@@ -421,6 +403,60 @@ export default function Services({
                       }
                     />
                   </div>
+                </div>
+              )}
+
+              {isServices === 4 && (
+                <div className="flex flex-col-reverse xl:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                    <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
+                      Organifi Sleep
+                    </h2>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      (Social Media Ads)
+                    </p>
+                    <p className="text-white/60 font-secondary text-sm leading-6">
+                      Create an advertisement layout for Organifi Sleep,
+                      incorporating infographics to showcase product
+                      information, and enhance visual appeal with floral
+                      compositions.
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs mt-4">
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Photoshop
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Instagram
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Social Content
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Informative
+                      </span>
+                      <span
+                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
+                      >
+                        Sleep Suplement
+                      </span>
+                    </div>
+                    <div className="flex gap-3 mt-2 xl:mt-8">
+                      <button
+                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
+                      >
+                        View More
+                      </button>
+                    </div>
+                  </div>
+                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-graphic_design bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
                 </div>
               )}
             </div>

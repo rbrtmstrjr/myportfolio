@@ -12,9 +12,10 @@ export default {
         gamer: "url('/images/gamer_bg.jpg')",
         designer: "url('/images/designers.jpg')",
         developer: "url('/images/devs.jpg')",
-        dashboard: "url('/images/web_sample2.png')",
-        dashboard1: "url('/images/web_sample_bg.png')",
-        dashboard2: "url('/images/web_ui.png')",
+        dashboard: "url('/images/macbook.png')",
+        wanderlinx: "url('/images/wanderlinx.png')",
+        uiux: "url('/images/uiux.png')",
+        graphic_design: "url('/images/graphic_design.png')",
       },
 
       colors: {

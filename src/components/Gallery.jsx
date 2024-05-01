@@ -33,7 +33,7 @@ export default function Gallery() {
   return (
     <section className="flex px-4 xl:px-20 pt-12 xl:pt-32" id="id2">
       <div className={model ? "model open" : "model"}>
-        <img src={tempingSrc} alt="" />
+        <img src={tempingSrc} alt="" loading="lazy" />
         <Icon
           icon="mingcute:close-fill"
           className="text-white text-3xl fixed top-8 right-8 cursor-pointer hover:scale-110"
@@ -48,7 +48,12 @@ export default function Gallery() {
               key={index}
               onClick={() => getImg(item.imgSrc)}
             >
-              <img src={item.imgSrc} alt="" className="w-full rounded-xl" />
+              <img
+                src={item.imgSrc}
+                alt=""
+                loading="lazy"
+                className="w-full rounded-xl"
+              />
             </div>
           ))}
         </div>

@@ -68,6 +68,7 @@ export default function AboutMe({
         <div className="w-full xl:w-1/2 py-0 xl:py-32 pl-0 xl:pr-0 xl:pl-20">
           <img
             src="./images/me.jpg"
+            loading="lazy"
             className="h-full w-full object-cover rounded-none xl:rounded-2xl "
             alt=""
             data-aos="fade-right"
