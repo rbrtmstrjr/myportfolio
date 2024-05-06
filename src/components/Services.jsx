@@ -76,50 +76,53 @@ export default function Services({
 
   return (
     <div>
-      <section className="px-4 py-12 xl:px-20 xl:py-32 " id="services">
-        <div className="mb-4 xl:mb-16">
-          <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
-            MY SKILLS
-          </label>
-          <h2
-            className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
-            data-aos="fade-down"
-          >
-            What I Do?
-          </h2>
-        </div>
-
-        <div
-          className="flex flex-col xl:flex-row flex-wrap gap-4"
-          data-aos="fade-up"
-        >
-          {services.map((services) => (
-            <div
-              className={`w-full xl:w-1/4 flex-grow flex gap-2 flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
-              key={services.id}
+      <section
+        className="flex justify-center px-4 py-12 lg:py-20 sm:px-10 xl:px-20 xl:py-32 "
+        id="services"
+      >
+        <div className="w-full max-w-screen-2xl">
+          <div className="mb-4 xl:mb-16">
+            <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl sm:text-7xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
+              MY SKILLS
+            </label>
+            <h2
+              className="text-3xl sm:text-4xl xl:text-5xl font-primary -mt-5 lg:-mt-8 xl:-mt-12 text-slate-300 text-center mb-8"
+              data-aos="fade-down"
             >
-              <Icon
-                icon={services.icon}
-                className={`${showTextAccent} text-5xl`}
-              />
+              What I Do?
+            </h2>
+          </div>
 
-              <h3 className="text-slate-300 font-primary text-xl 2xl:text-2xl mt-8">
-                {services.title}
-              </h3>
-              <p className="text-darkGray text-sm leading-6">
-                {services.description}
-              </p>
-
-              <button
-                className={`${showBgHoverAccent} w-28 mt-4 hover:transition hover:duration-300 hover:text-primary px-5 py-3 border border-darkGray/50 text-darkGray text-xs rounded-lg`}
-                onClick={() => openModal(services.id)}
+          <div className="flex flex-wrap gap-4" data-aos="fade-up">
+            {services.map((services) => (
+              <div
+                className={`w-full sm:w-1/3 xl:w-1/4 flex-grow flex gap-2 flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
+                key={services.id}
               >
-                View Sample
-              </button>
-            </div>
-          ))}
+                <Icon
+                  icon={services.icon}
+                  className={`${showTextAccent} text-5xl`}
+                />
+
+                <h3 className="text-slate-300 font-primary text-xl lg:text-2xl mt-8">
+                  {services.title}
+                </h3>
+                <p className="text-darkGray text-sm leading-6">
+                  {services.description}
+                </p>
+
+                <button
+                  className={`${showBgHoverAccent} w-28 mt-4 hover:transition hover:duration-300 hover:text-primary px-5 py-3 border border-darkGray/50 text-darkGray text-xs rounded-lg`}
+                  onClick={() => openModal(services.id)}
+                >
+                  View Sample
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
           <button

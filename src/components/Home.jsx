@@ -31,17 +31,18 @@ export default function Home({
 
   return (
     <>
-      <main className=" text-slate-300 relative overflow-hidden">
-        <div className="absolute flex items-center">
-          <img
-            src={bg}
-            alt=""
-            loading="lazy"
-            className="w-4/5 h-screen opacity-5"
-          />
-        </div>
-        <div className="px-4 xl:px-20">
-          <article className="flex flex-col md:flex-row py-6 2xl:py-20 z-10">
+      <main className=" text-slate-300 px-4 sm:px-10 xl:px-20 flex justify-center relative overflow-hidden">
+        <div className="w-full max-w-screen-2xl">
+          <div className="absolute flex items-center">
+            <img
+              src={bg}
+              alt=""
+              loading="lazy"
+              className="w-4/5 h-screen opacity-5"
+            />
+          </div>
+
+          <article className="flex flex-col md:flex-row py-6 md:py-10 xl:py-20 z-10">
             <div
               className="w-full 2xl:w-1/2 flex flex-col justify-center items-center z-10 relative"
               data-aos="fade-right"
@@ -65,7 +66,7 @@ export default function Home({
                   loading="lazy"
                   className={`${
                     card.id === active ? "opacity-100" : "opacity-0 absolute"
-                  } mt-2 2xl:mt-0 w-4/5 xl:w-3/5 z-10 transition-opacity duration-500`}
+                  } mt-2 2xl:mt-0 w-4/5 sm:w-3/5 md:w-4/5 xl:w-3/5 z-10 transition-opacity duration-500`}
                   key={card.id}
                 />
               ))}
@@ -92,13 +93,13 @@ export default function Home({
                 <div className="">
                   <a href="#id6">
                     <button
-                      className={`w-36 2xl:w-40 ${accentBgColor} text-sm 2xl:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
+                      className={`w-36 sm:w-40 ${accentBgColor} text-sm sm:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
                     >
                       CONNECT
                     </button>
                   </a>
                 </div>
-                <div className="flex items-center gap-2 xl:gap-4 text-4xl text-darkGray">
+                <div className="flex items-center gap-2 sm:gap-4 text-4xl text-darkGray">
                   {socialMedia.map((social) => (
                     <a
                       href={social.url}
@@ -122,7 +123,7 @@ export default function Home({
                       card.id === active
                         ? "opacity-100 scale-100 mx-1"
                         : "opacity-30 scale-95"
-                    } duration-300 hover:cursor-pointer hover:scale-100 rounded-2xl w-1/2 2xl:w-1/3 h-32 xl:h-60 ${
+                    } duration-300 hover:cursor-pointer hover:scale-100 rounded-2xl w-1/2 2xl:w-1/3 h-32 sm:h-48 md:h-32 xl:h-60 ${
                       card.imageUrl
                     } bg-cover bg-center bg-no-repeat1 transition`}
                     key={card.id}

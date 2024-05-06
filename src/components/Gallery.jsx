@@ -31,31 +31,36 @@ export default function Gallery() {
     setModel(true);
   };
   return (
-    <section className="flex px-4 xl:px-20 pt-12 xl:pt-32" id="id2">
-      <div className={model ? "model open" : "model"}>
-        <img src={tempingSrc} alt="" loading="lazy" />
-        <Icon
-          icon="mingcute:close-fill"
-          className="text-white text-3xl fixed top-8 right-8 cursor-pointer hover:scale-110"
-          onClick={() => setModel(false)}
-        />
-      </div>
-      <div className="overflow-hidden">
-        <div className="gallery" data-aos="fade-up">
-          {imgData.map((item, index) => (
-            <div
-              className="pics grayscale hover:grayscale-0 opacity-70 hover:opacity-100 hover:scale-105"
-              key={index}
-              onClick={() => getImg(item.imgSrc)}
-            >
-              <img
-                src={item.imgSrc}
-                alt=""
-                loading="lazy"
-                className="w-full rounded-xl"
-              />
-            </div>
-          ))}
+    <section
+      className="flex justify-center px-4 sm:px-10 xl:px-20 pt-12 lg:pt-20 xl:pt-32"
+      id="id2"
+    >
+      <div className="w-full max-w-screen-2xl">
+        <div className={model ? "model open" : "model"}>
+          <img src={tempingSrc} alt="" loading="lazy" />
+          <Icon
+            icon="mingcute:close-fill"
+            className="text-white text-3xl fixed top-8 right-8 cursor-pointer hover:scale-110"
+            onClick={() => setModel(false)}
+          />
+        </div>
+        <div className="overflow-hidden">
+          <div className="gallery" data-aos="fade-up">
+            {imgData.map((item, index) => (
+              <div
+                className="pics grayscale hover:grayscale-0 opacity-70 hover:opacity-100 hover:scale-105"
+                key={index}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  src={item.imgSrc}
+                  alt=""
+                  loading="lazy"
+                  className="w-full rounded-xl"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

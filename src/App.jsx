@@ -233,20 +233,27 @@ export default function App() {
         </div>
       )}
 
-      <nav className="flex justify-between px-4 lg:px-20 pt-4" id="home">
-        <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
-        <div
-          className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
-        >
-          <a href="./images/maestro_robert_resume.pdf" target="_blank">
-            <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
-          </a>
-          <h1
-            className={`select-none ${showHoverTextAccent}`}
-            onMouseEnter={() => setShowAccentTab(!showAccentTab)}
-          >
-            Themes
-          </h1>
+      <nav
+        className="flex justify-center px-4 sm:px-10 xl:px-20 pt-4"
+        id="home"
+      >
+        <div className="w-full max-w-screen-2xl">
+          <div className="flex justify-between">
+            <h1 className={`${showTextAccent} font-primary text-lg`}>RM</h1>
+            <div
+              className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
+            >
+              <a href="./images/maestro_robert_resume.pdf" target="_blank">
+                <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
+              </a>
+              <h1
+                className={`select-none ${showHoverTextAccent}`}
+                onMouseEnter={() => setShowAccentTab(!showAccentTab)}
+              >
+                Themes
+              </h1>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -270,82 +277,84 @@ export default function App() {
         onExit={() => setCounterOn(false)}
       >
         <section
-          className="px-4 xl:px-20 py-12 xl:py-20 bg-secondary/10 filter backdrop-blur-md"
+          className="flex justify-center px-4 lg:px-10 xl:px-20 py-12 lg:py-20 bg-secondary/10 filter backdrop-blur-md"
           data-aos="fade-right"
         >
-          {counterOn && (
-            <div className="flex flex-col xl:flex-row gap-16 xl:gap-16">
-              <div className="w-full xl:w-1/4 flex items-center flex-col">
-                <div className="flex flex-grow items-center gap-4">
-                  <Icon
-                    icon="iconoir:computer"
-                    className={`${showTextAccent} text-4xl`}
-                  />
+          <div className="w-full max-w-screen-2xl">
+            {counterOn && (
+              <div className="flex flex-wrap gap-12 sm:gap-0 lg:gap-0 xl:gap-16">
+                <div className="w-full sm:w-1/2 xl:w-1/5 flex-grow flex items-center flex-col">
+                  <div className="flex items-center gap-4">
+                    <Icon
+                      icon="iconoir:computer"
+                      className={`${showTextAccent} text-4xl`}
+                    />
 
-                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                    <CountUp
-                      start={0}
-                      end={150}
-                      duration={1}
-                      delay={0}
-                    ></CountUp>{" "}
-                    +
-                  </h2>
+                    <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                      <CountUp
+                        start={0}
+                        end={150}
+                        duration={1}
+                        delay={0}
+                      ></CountUp>{" "}
+                      +
+                    </h2>
+                  </div>
+                  <p className="text-darkGray text-sm mt-2 leading-6">
+                    Different Website Created
+                  </p>
                 </div>
-                <p className="text-darkGray text-sm mt-2 leading-6">
-                  Different Website Created
-                </p>
-              </div>
-              <div className="w-full xl:w-1/4 flex items-center flex-col">
-                <div className="flex items-center  gap-4">
-                  <Icon
-                    icon="mynaui:edit-one"
-                    className={`${showTextAccent} text-4xl`}
-                  />
-                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                    <CountUp
-                      start={0}
-                      end={100}
-                      duration={1}
-                      delay={0}
-                    ></CountUp>{" "}
-                    +
-                  </h2>
+                <div className="w-full sm:w-1/2 xl:w-1/5 flex-grow flex items-center flex-col">
+                  <div className="flex items-center  gap-4">
+                    <Icon
+                      icon="mynaui:edit-one"
+                      className={`${showTextAccent} text-4xl`}
+                    />
+                    <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                      <CountUp
+                        start={0}
+                        end={100}
+                        duration={1}
+                        delay={0}
+                      ></CountUp>{" "}
+                      +
+                    </h2>
+                  </div>
+                  <p className="text-darkGray text-sm mt-2 leading-6">
+                    Existing Website Redesigned
+                  </p>
                 </div>
-                <p className="text-darkGray text-sm mt-2 leading-6">
-                  Existing Website Redesigned
-                </p>
-              </div>
-              <div className="w-full xl:w-1/4 flex items-center flex-col">
-                <div className="flex items-center gap-4">
-                  <Icon
-                    icon="iconamoon:screen-full"
-                    className={`${showTextAccent} text-4xl`}
-                  />
-                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                    <CountUp start={0} end={2} duration={1}></CountUp> Years
-                  </h2>
+                <div className="w-full mt-0 sm:mt-12 xl:mt-0 sm:w-1/2 xl:w-1/5 flex-grow flex items-center flex-col">
+                  <div className="flex items-center gap-4">
+                    <Icon
+                      icon="iconamoon:screen-full"
+                      className={`${showTextAccent} text-4xl`}
+                    />
+                    <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                      <CountUp start={0} end={2} duration={1}></CountUp> Years
+                    </h2>
+                  </div>
+                  <p className="text-darkGray text-sm mt-2 leading-6">
+                    Solid Web Design Experience
+                  </p>
                 </div>
-                <p className="text-darkGray text-sm mt-2 leading-6">
-                  Solid Web Design Experience
-                </p>
-              </div>
-              <div className="w-full xl:w-1/4 flex items-center flex-col">
-                <div className="flex items-center gap-4">
-                  <Icon
-                    icon="ph:layout-duotone"
-                    className={`${showTextAccent} text-4xl`}
-                  />
-                  <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
-                    <CountUp start={0} end={1} duration={1}></CountUp> Year
-                  </h2>
+                <div className="w-full mt-0 sm:mt-12 xl:mt-0 sm:w-1/2 xl:w-1/5 flex-grow flex items-center flex-col">
+                  <div className="flex items-center gap-4">
+                    <Icon
+                      icon="ph:layout-duotone"
+                      className={`${showTextAccent} text-4xl`}
+                    />
+                    <h2 className="font-primary text-3xl xl:text-4xl text-slate-300">
+                      <CountUp start={0} end={1} duration={1}></CountUp> Year
+                    </h2>
+                  </div>
+                  <p className="text-darkGray text-sm mt-2 leading-6">
+                    Graphic Design Experience
+                  </p>
                 </div>
-                <p className="text-darkGray text-sm mt-2 leading-6">
-                  Graphic Design Experience
-                </p>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </section>
       </ScrollTrigger>
 
@@ -371,82 +380,87 @@ export default function App() {
       </ScrollTrigger>
 
       <ScrollTrigger onEnter={() => handleSectionEnter("testimonials")}>
-        <section className="px-4 xl:px-20 py-12 xl:py-24" id="testimonials">
-          <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
-            FEEDBACK
-          </label>
-          <h2
-            className="text-3xl xl:text-5xl font-primary -mt-5 xl:-mt-12 text-slate-300 text-center mb-8"
-            data-aos="fade-down"
-          >
-            What Others Say?
-          </h2>
-          <div className="flex mt-12 xl:mt-16">
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              navigation={true}
-              spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              pagination={{ clickable: true }}
-              style={{
-                "--swiper-pagination-color": "#fff",
-                "--swiper-pagination-bullet-inactive-color": "#ffffff",
-                "--swiper-pagination-bullet-inactive-opacity": "0.2",
-                "--swiper-pagination-bullet-size": "10px",
-              }}
+        <section
+          className="flex justify-center px-4 sm:px-10 xl:px-20 py-12 md:py-20"
+          id="testimonials"
+        >
+          <div className="w-full max-w-screen-2xl">
+            <label className="flex justify-center items-center outline-title leading-none tracking-expand text-5xl md:text-7xl xl:text-8xl opacity-20 font-primary ml-2 z-20">
+              FEEDBACK
+            </label>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-primary -mt-5 lg:-mt-8 xl:-mt-12 text-slate-300 text-center mb-8"
+              data-aos="fade-down"
             >
-              {testimonials.map((data) => (
-                <SwiperSlide key={data.id}>
-                  <div className="flex flex-col-reverse xl:flex-row items-center">
-                    <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
-                      <div className="-mr-0 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 xl:p-10 flex flex-col gap-4">
-                        <Icon
-                          icon="ph:quotes-fill"
-                          className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
-                        />
-                        <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
-                        <p className="text-darkGray text-sm leading-6">
-                          {data.feedback}
-                        </p>
-                        <div>
-                          <h1 className="text-2xl font-primary text-slate-300">
-                            {data.name}
-                          </h1>
+              What Others Say?
+            </h2>
+            <div className="flex mt-12 xl:mt-16">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                navigation={true}
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                pagination={{ clickable: true }}
+                style={{
+                  "--swiper-pagination-color": "#fff",
+                  "--swiper-pagination-bullet-inactive-color": "#ffffff",
+                  "--swiper-pagination-bullet-inactive-opacity": "0.2",
+                  "--swiper-pagination-bullet-size": "10px",
+                }}
+              >
+                {testimonials.map((data) => (
+                  <SwiperSlide key={data.id}>
+                    <div className="flex flex-col-reverse md:flex-row items-center">
+                      <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
+                        <div className="-mr-0 lg:-mr-6 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 lg:p-10 flex flex-col gap-4">
+                          <Icon
+                            icon="ph:quotes-fill"
+                            className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
+                          />
+                          <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
                           <p className="text-darkGray text-sm leading-6">
-                            {data.position}
+                            {data.feedback}
                           </p>
+                          <div>
+                            <h1 className="text-2xl font-primary text-slate-300">
+                              {data.name}
+                            </h1>
+                            <p className="text-darkGray text-sm leading-6">
+                              {data.position}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="w-full xl:w-1/2 rounded-2xl">
+                        <div
+                          className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-70 rounded-2xl overflow-hidden`}
+                        >
+                          <img
+                            src={data.imgUrl}
+                            loading="lazy"
+                            className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
+                            alt=""
+                          />
                         </div>
                       </div>
                     </div>
-
-                    <div className="w-full xl:w-1/2 rounded-2xl">
-                      <div
-                        className={`w-full h-full ${showBgAccent} backdrop-blur-md bg-opacity-70 rounded-2xl overflow-hidden`}
-                      >
-                        <img
-                          src={data.imgUrl}
-                          loading="lazy"
-                          className="w-full inset-0 object-cover h-full rounded-2xl mix-blend-multiply"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-              <div className="mt-12">...</div>
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+                <div className="mt-12">...</div>
+              </Swiper>
+            </div>
           </div>
         </section>
       </ScrollTrigger>
 
       <ScrollTrigger onEnter={() => handleSectionEnter("contact")}>
         <section
-          className="flex justify-center bg-secondary/10 items-center px-6 py-12 md:px-20 md:py-24 "
+          className="flex justify-center bg-secondary/10 items-center px-6 py-12 sm:px-10 xl:px-20 md:py-20"
           id="contact"
         >
           <div className="w-full max-w-screen-2xl">
@@ -455,10 +469,10 @@ export default function App() {
                 className="w-full md:w-3/5 flex flex-col gap-4 pr-0 md:pr-12"
                 data-aos="fade-right"
               >
-                <label className="outline-title leading-none tracking-expand text-5xl xl:text-8xl opacity-20 font-primary z-20">
+                <label className="outline-title leading-none tracking-expand text-5xl lg:text-7xl xl:text-8xl opacity-20 font-primary z-20">
                   CONNECT
                 </label>
-                <h2 className="text-3xl xl:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-primary -mt-10 lg:-mt-12 text-slate-300">
                   Get in Touch
                 </h2>
                 <p className="text-darkGray text-sm leading-6">
@@ -556,8 +570,8 @@ export default function App() {
       </ScrollTrigger>
 
       <footer className="px-6 py-12 md:px-32 md:py-24">
-        <div className="flex flex-col gap-10 items-center">
-          <h2 className="text-3xl xl:text-5xl font-primary text-slate-300">
+        <div className="flex flex-col gap-4 mb-10 xl:mb-0 xl:gap-10 items-center">
+          <h2 className="text-3xl lg:text-5xl font-primary text-slate-300">
             Want to know More?
           </h2>
           <div className="flex flex-col justify-center items-center gap-4">
