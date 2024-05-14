@@ -91,7 +91,7 @@ export default function Home({
               </div>
               <div className="flex gap-3 xl:gap-8">
                 <div className="">
-                  <a href="#id6">
+                  <a href="#contact">
                     <button
                       className={`w-36 sm:w-40 ${accentBgColor} text-sm sm:text-base hover:scale-110 transition text-black rounded-bl-xl rounded-tr-xl font-primary p-2 z-20 tracking-mini_stretch text-center`}
                     >

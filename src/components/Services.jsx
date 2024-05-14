@@ -134,8 +134,8 @@ export default function Services({
           <div className="bg-tertiary w-11/12 xl:w-4/5 mx-auto rounded-2xl shadow-xl z-50">
             <div>
               {isServices === 1 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0">
-                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                <div className="flex flex-col-reverse md:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Innervate Chiropractic
                     </h2>
@@ -195,13 +195,13 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
+                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
                 </div>
               )}
 
               {isServices === 2 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0">
-                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                <div className="flex flex-col-reverse md:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Wanderlinx
                     </h2>
@@ -265,13 +265,13 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-wanderlinx bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
+                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-wanderlinx bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
                 </div>
               )}
 
               {isServices === 3 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0">
-                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                <div className="flex flex-col-reverse md:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       2024 Portfolio
                     </h2>
@@ -334,13 +334,13 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-uiux bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
+                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-uiux bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
                 </div>
               )}
 
               {isServices === 5 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0">
-                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                <div className="flex flex-col-reverse md:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Birthday Poster
                     </h2>
@@ -410,8 +410,8 @@ export default function Services({
               )}
 
               {isServices === 4 && (
-                <div className="flex flex-col-reverse xl:flex-row gap-0">
-                  <div className="w-full xl:w-2/5 py-8 px-4 xl:px-14 xl:py-14 2xl:py-24 flex justify-center flex-col gap-2">
+                <div className="flex flex-col-reverse md:flex-row gap-0">
+                  <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
                       Organifi Sleep
                     </h2>
@@ -459,7 +459,7 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full xl:w-3/5 p-8 flex items-center bg-graphic_design bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl xl:rounded-tl-none xl:rounded-r-2xl"></div>
+                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-graphic_design bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
                 </div>
               )}
             </div>

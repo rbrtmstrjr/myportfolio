@@ -243,7 +243,7 @@ export default function App() {
             <div
               className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
             >
-              <a href="./images/maestro_robert_resume.pdf" target="_blank">
+              <a href="./images/resume_maestro_robert.pdf" target="_blank">
                 <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
               </a>
               <h1
@@ -526,6 +526,7 @@ export default function App() {
                       onSubmit={sendEmail}
                       className="w-full flex flex-col gap-6"
                     >
+                      <h2 className="text-white">Tell Me Something</h2>
                       <input
                         type="text"
                         name="name"
