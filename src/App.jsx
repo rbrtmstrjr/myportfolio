@@ -571,7 +571,7 @@ export default function App() {
 
       <footer className="px-6 py-12 md:px-32 md:py-24">
         <div className="flex flex-col gap-4 mb-10 xl:mb-0 xl:gap-10 items-center">
-          <h2 className="text-3xl lg:text-5xl font-primary text-slate-300">
+          <h2 className="text-3xl text-center lg:text-5xl font-primary text-slate-300">
             Want to know More?
           </h2>
           <div className="flex flex-col justify-center items-center gap-4">

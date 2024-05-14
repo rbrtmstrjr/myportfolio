@@ -69,18 +69,18 @@ export default function AboutMe({
         id="about"
       >
         <div className="w-full flex flex-col gap-12 md:gap-6 md:flex-row max-w-screen-2xl">
-          <div className="w-full xl:w-1/2">
+          <div className="w-full h-full xl:w-1/2">
             <img
               src="./images/me.jpg"
               loading="lazy"
-              className="h-full w-full object-cover rounded-none md:rounded-2xl "
+              className="h-full w-full object-cover  rounded-none md:rounded-2xl "
               alt=""
               data-aos="fade-right"
             />
           </div>
 
           <div
-            className="w-full xl:w-1/2 px-4 sm:px-10 md:px-0 pb-12 sm:pb-20 flex flex-col justify-center gap-4"
+            className="w-full xl:w-1/2 px-4 sm:px-10 md:px-0 pb-12 sm:pb-20 xl:pb-0 flex flex-col justify-center gap-4"
             data-aos="fade-left"
           >
             <label className="outline-title leading-none tracking-expand text-5xl md:text-6xl xl:text-8xl opacity-20 font-primary z-20">
