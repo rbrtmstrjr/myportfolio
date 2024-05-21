@@ -577,7 +577,7 @@ export default function App() {
           </h2>
           <div className="flex flex-col justify-center items-center gap-4">
             <a
-              href="./images/maestro_robert_resume.pdf"
+              href="./images/resume_maestro_robert.pdf"
               target="_blank"
               className={`${showBgAccent} hover:transition hover:duration-300 hover:scale-110 px-5 py-3 text-primary rounded-lg`}
             >
