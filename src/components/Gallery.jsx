@@ -1,26 +1,29 @@
 import { useState } from "react";
 
 import { Icon } from "@iconify/react";
-import Img3 from "/images/sample_image6.jpg";
-import Img4 from "/images/sample_image1.jpg";
-import Img5 from "/images/sample_image3.jpg";
-import Img6 from "/images/sample_image2.jpg";
-import Img7 from "/images/sample_image4.jpg";
-import Img8 from "/images/sample_image5.jpg";
-import Img9 from "/images/dashboard2.png";
-import Img10 from "/images/dashboard.png";
+import Img1 from "/images/landing_page4.jpg";
+import Img2 from "/images/sample_image1.jpg";
+import Img3 from "/images/landing_page1.jpg";
+import Img4 from "/images/landing_page3.jpg";
+import Img5 from "/images/landing_page6.jpg";
+import Img6 from "/images/graphic_design.png";
+import Img7 from "/images/landing_page5.jpg";
+import Img8 from "/images/landing_page2.jpg";
+import Img9 from "/images/wanderlinx.png";
+import Img10 from "/images/landing_page7.jpg";
 
 export default function Gallery() {
   let imgData = [
-    { id: 4, imgSrc: Img4 },
-    { id: 5, imgSrc: Img5 },
-    { id: 6, imgSrc: Img6 },
-    { id: 7, imgSrc: Img7 },
-    { id: 8, imgSrc: Img8 },
-    { id: 9, imgSrc: Img9 },
-    { id: 10, imgSrc: Img3 },
-    { id: 11, imgSrc: Img10 },
-    { id: 11, imgSrc: Img5 },
+    { id: 1, imgSrc: Img2 },
+    { id: 2, imgSrc: Img4 },
+    { id: 3, imgSrc: Img5 },
+    { id: 4, imgSrc: Img3 },
+    { id: 5, imgSrc: Img6 },
+    { id: 6, imgSrc: Img1 },
+    { id: 7, imgSrc: Img9 },
+    { id: 8, imgSrc: Img7 },
+    { id: 9, imgSrc: Img8 },
+    { id: 10, imgSrc: Img10 },
   ];
 
   const [model, setModel] = useState(false);
