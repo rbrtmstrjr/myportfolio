@@ -273,14 +273,14 @@ export default function Services({
                 <div className="flex flex-col-reverse md:flex-row gap-0">
                   <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
-                      2024 Portfolio
+                      Freshly Dropped
                     </h2>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      (Online Portfolio)
+                      (Mobile App Design)
                     </p>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      A compilation detailing all the projects from wireframing
-                      to prototyping to development.
+                      Freshly Dropped brings the joy of home cooking to your
+                      doorstep with convenient meal boxes.
                     </p>
                     <div className="flex flex-wrap gap-3 text-xs mt-4">
                       <span
@@ -291,32 +291,27 @@ export default function Services({
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        React Js
+                        Mobile App
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Tailwind Css
+                        Fresh ingredients
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Minimal
+                        Home cooking
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Responsive
-                      </span>
-                      <span
-                        className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
-                      >
-                        Darkmode
+                        Meal delivery
                       </span>
                     </div>
                     <div className="flex gap-3 mt-2 xl:mt-8">
                       <a
-                        href="https://www.figma.com/file/6nq6bq1exrU0ngZZfXtXYS/Portfolio-2024?type=design&node-id=0%3A1&mode=design&t=qsW7ECYU1WmUhiYA-1"
+                        href="https://www.figma.com/design/IxxBsbJEi6VDVA1lRI1dLb/Freshly-Dropped?node-id=0-1&t=I6NrTFU9caZQJ55l-1"
                         target="_blank"
                         rel="noreferrer"
                       >

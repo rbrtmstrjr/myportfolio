@@ -14,7 +14,7 @@ export default {
         developer: "url('/images/devs.jpg')",
         dashboard: "url('/images/macbook.png')",
         wanderlinx: "url('/images/wanderlinx.png')",
-        uiux: "url('/images/uiux.png')",
+        uiux: "url('/images/uiuxdesign.jpg')",
         graphic_design: "url('/images/graphic_design.png')",
       },
 
