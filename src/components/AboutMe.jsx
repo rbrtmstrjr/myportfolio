@@ -68,8 +68,8 @@ export default function AboutMe({
         className="flex justify-center px-0 py-0 sm:px-0 sm:py-0 md:px-10 xl:px-20 md:py-20 bg-secondary/10"
         id="about"
       >
-        <div className="w-full flex flex-col gap-12 md:gap-6 md:flex-row max-w-screen-2xl">
-          <div className="w-full h-full xl:w-1/2">
+        <div className="w-full flex flex-col gap-4 md:gap-14 md:flex-row max-w-screen-2xl">
+          <div className="w-auto h-full xl:w-1/2">
             <img
               src="./images/me.jpg"
               loading="lazy"

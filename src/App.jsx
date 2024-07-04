@@ -416,13 +416,13 @@ export default function App() {
                   <SwiperSlide key={data.id}>
                     <div className="flex flex-col-reverse md:flex-row items-center">
                       <div className="w-full xl:w-1/2 xl:-mt-0 -mt-6 z-0 xl:z-50">
-                        <div className="-mr-0 lg:-mr-6 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 lg:p-10 flex flex-col gap-4">
+                        <div className="-mr-0 lg:-mr-6 xl:-mr-12 shadow-xl border border-white/20 rounded-2xl backdrop-blur-2xl bg-white/10 p-6 lg:p-10 flex flex-col gap-8">
                           <Icon
                             icon="ph:quotes-fill"
                             className={`-mt-0 xl:-mt-24 ${showTextAccent} text-9xl`}
                           />
                           <p className="text-sm leading-6">⭐⭐⭐⭐⭐</p>
-                          <p className="text-darkGray text-sm leading-6">
+                          <p className="text-darkGray text-xl leading-9">
                             {data.feedback}
                           </p>
                           <div>

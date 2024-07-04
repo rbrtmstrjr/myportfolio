@@ -93,7 +93,7 @@ export default function Services({
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-4" data-aos="fade-up">
+          <div className="flex flex-wrap gap-6" data-aos="fade-up">
             {services.map((services) => (
               <div
                 className={`w-full sm:w-1/3 xl:w-1/4 flex-grow flex gap-2 flex-col bg-secondary/20 rounded-2xl p-8 xl:p-12 hover:scale-105 transition duration-300 hover:cursor-pointer hover:bg-secondary/30`}
