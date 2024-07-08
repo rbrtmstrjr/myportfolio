@@ -32,7 +32,7 @@ const socialMedia = [
   {
     id: 3,
     icon: "devicon-plain:linkedin",
-    url: "https://www.linkedin.com/in/robert-maestro-64a7981a0/",
+    url: "https://www.linkedin.com/in/robert-maestro-jr-64a7981a0",
   },
   {
     id: 4,
