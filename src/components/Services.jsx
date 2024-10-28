@@ -408,16 +408,15 @@ export default function Services({
                 <div className="flex flex-col-reverse md:flex-row gap-0">
                   <div className="w-full xl:w-2/5 py-8 px-4 md:px-14 md:py-14 2xl:py-24 flex justify-center flex-col gap-2">
                     <h2 className="text-2xl xl:text-3xl font-primary text-slate-300">
-                      Organifi Sleep
+                      Zone3
                     </h2>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      (Social Media Ads)
+                      (Instagram Carousel)
                     </p>
                     <p className="text-white/60 font-secondary text-sm leading-6">
-                      Create an advertisement layout for Organifi Sleep,
-                      incorporating infographics to showcase product
-                      information, and enhance visual appeal with floral
-                      compositions.
+                      Create an Instagram carousel layout for Zone3, a company
+                      selling wetsuit in the US incorporating infographics to
+                      showcase product information, and enhance visual appeal.
                     </p>
                     <div className="flex flex-wrap gap-3 text-xs mt-4">
                       <span
@@ -438,12 +437,12 @@ export default function Services({
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Informative
+                        Infographics
                       </span>
                       <span
                         className={`px-3 py-1 rounded-full ${showLightAccent} text-primary`}
                       >
-                        Sleep Suplement
+                        Carousel
                       </span>
                     </div>
                     <div className="flex gap-3 mt-2 xl:mt-8">
@@ -454,7 +453,7 @@ export default function Services({
                       </button>
                     </div>
                   </div>
-                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-graphic_design bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
+                  <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-graphic bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
                 </div>
               )}
             </div>

@@ -6,7 +6,7 @@ import Img2 from "/images/sample_image1.jpg";
 import Img3 from "/images/landing_page1.jpg";
 import Img4 from "/images/landing_page3.jpg";
 import Img5 from "/images/landing_page6.jpg";
-import Img6 from "/images/graphic_design.png";
+import Img6 from "/images/zone3.png";
 import Img7 from "/images/landing_page5.jpg";
 import Img8 from "/images/landing_page2.jpg";
 import Img9 from "/images/wanderlinx.png";

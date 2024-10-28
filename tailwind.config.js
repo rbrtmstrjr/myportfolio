@@ -15,7 +15,7 @@ export default {
         dashboard: "url('/images/macbook.png')",
         wanderlinx: "url('/images/wanderlinx.png')",
         uiux: "url('/images/uiuxdesign.jpg')",
-        graphic_design: "url('/images/graphic_design.png')",
+        graphic: "url('/images/graphic.png')",
       },
 
       colors: {
