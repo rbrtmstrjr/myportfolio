@@ -187,12 +187,6 @@ export default function Services({
                           Visit Site
                         </button>
                       </a>
-
-                      <button
-                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-                      >
-                        View More
-                      </button>
                     </div>
                   </div>
                   <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-dashboard bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
@@ -257,12 +251,6 @@ export default function Services({
                           Visit Site
                         </button>
                       </a>
-
-                      <button
-                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-                      >
-                        View More
-                      </button>
                     </div>
                   </div>
                   <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-wanderlinx bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
@@ -321,12 +309,6 @@ export default function Services({
                           Visit Figma File
                         </button>
                       </a>
-
-                      <button
-                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-                      >
-                        View More
-                      </button>
                     </div>
                   </div>
                   <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-uiux bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>
@@ -374,13 +356,7 @@ export default function Services({
                         Pastel
                       </span>
                     </div>
-                    <div className="flex gap-3 mt-2 xl:mt-8">
-                      <button
-                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-                      >
-                        View More
-                      </button>
-                    </div>
+                    <div className="flex gap-3 mt-2 xl:mt-8"></div>
                   </div>
                   <div className="w-full h-auto xl:w-3/5">
                     <ReactCompareSlider
@@ -444,13 +420,6 @@ export default function Services({
                       >
                         Carousel
                       </span>
-                    </div>
-                    <div className="flex gap-3 mt-2 xl:mt-8">
-                      <button
-                        className={`${showBgHoverAccent} w-28 transition duration-300 hover:text-primary px-5 py-3 border border-slate-300/20 text-slate-300/70 text-xs rounded-lg`}
-                      >
-                        View More
-                      </button>
                     </div>
                   </div>
                   <div className="relative w-full h-56 sm:h-96 md:h-auto xl:w-3/5 p-8 flex items-center bg-graphic bg-center bg-cover backdrop-blur-xl rounded-none rounded-t-2xl md:rounded-tl-none md:rounded-r-2xl"></div>

@@ -243,10 +243,7 @@ export default function App() {
             <div
               className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
             >
-              <a
-                href="./images/resume_maestro_robert_download.pdf"
-                target="_blank"
-              >
+              <a href="./images/resume_maestro_robert_jr.pdf" target="_blank">
                 <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
               </a>
               <h1
@@ -580,7 +577,7 @@ export default function App() {
           </h2>
           <div className="flex flex-col justify-center items-center gap-4">
             <a
-              href="./images/resume_maestro_robert.pdf"
+              href="./images/resume_maestro_robert_jr.pdf"
               target="_blank"
               className={`${showBgAccent} hover:transition hover:duration-300 hover:scale-110 px-5 py-3 text-primary rounded-lg`}
             >
