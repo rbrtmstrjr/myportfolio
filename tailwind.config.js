@@ -8,7 +8,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        aboutme: "url('/images/me.jpg')",
+        aboutme: "url('/images/myprofile.jpg')",
         gamer: "url('/images/gamer_bg.jpg')",
         designer: "url('/images/designers.jpg')",
         developer: "url('/images/devs.jpg')",

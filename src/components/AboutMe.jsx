@@ -71,9 +71,9 @@ export default function AboutMe({
         <div className="w-full flex flex-col gap-4 md:gap-14 md:flex-row max-w-screen-2xl">
           <div className="w-auto h-full xl:w-1/2">
             <img
-              src="./images/me.jpg"
+              src="./images/meowmeow.jpg"
               loading="lazy"
-              className="h-full w-full object-cover  rounded-none md:rounded-2xl "
+              className="h-auto w-full object-cover  rounded-none md:rounded-2xl "
               alt=""
               data-aos="fade-right"
             />
@@ -87,7 +87,7 @@ export default function AboutMe({
               ABOUT ME
             </label>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-primary -mt-10 xl:-mt-12 text-slate-300">
-              Hi Im Rajon
+              Hi Im Robert
             </h2>
             <p className="text-darkGray text-sm leading-6">
               A dynamic designer with a passion for creating visually stunning
@@ -173,12 +173,17 @@ export default function AboutMe({
                     <span
                       className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                     >
+                      Communication
+                    </span>
+                    <span
+                      className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
+                    >
                       Adaptability
                     </span>
                     <span
                       className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
                     >
-                      Creative
+                      Creativity
                     </span>
                     <span
                       className={`px-3 py-1 rounded-full ${showAccent} text-primary font-medium`}
@@ -204,6 +209,28 @@ export default function AboutMe({
                         className={`${showAccent} w-4 h-4 flex items-center justify-center rounded-full -ml-6 mr-7 -mt-2`}
                       ></div>
                       <h4 className="-mt-2 text-slate-300">
+                        Freelance Web Designer
+                      </h4>
+                    </div>
+                    <div className="ml-6 mb-6 mt-1">
+                      <p className={`${showTextAccent} text-sm leading-6`}>
+                        March 2024 - Present
+                      </p>
+                      <p className="text-sm mt-3 leading-6">
+                        Creating engaging, user-friendly websites for diverse
+                        clients sourced through Upwork and LinkedIn. Also
+                        focuses on crafting custom UI/UX solutions, responsive
+                        designs, and modern web experiences tailored to each
+                        clients needs.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="flex flex-start items-center">
+                      <div
+                        className={`${showAccent} w-4 h-4 flex items-center justify-center rounded-full -ml-6 mr-7 -mt-2`}
+                      ></div>
+                      <h4 className="-mt-2 text-slate-300">
                         Web Designer / Analyst | Personiv Manila
                       </h4>
                     </div>
@@ -212,9 +239,10 @@ export default function AboutMe({
                         April 2022 - February 2024
                       </p>
                       <p className="text-sm mt-3 leading-6">
-                        Crafting visually stunning and highly functional
-                        websites tailored to meet the unique needs of businesses
-                        using Thyv CMS.
+                        Optimizing Web solutions for clients in the US, Canada,
+                        and New Zealand using the DUDA CMS. My role focused on
+                        enhancing user experience and site performance through
+                        custom web designs and data-driven analysis.
                       </p>
                     </div>
                   </li>
@@ -232,8 +260,9 @@ export default function AboutMe({
                         September 2020 - November 2021
                       </p>
                       <p className="text-sm mt-3 leading-6">
-                        Creating Design for T-Shirt, Tarpaulin and Other Digital
-                        Prints. Also Maintain and Troubleshoot Printers.
+                        Creating Design for T-Shirt Sublimation, Tarpaulin and
+                        Other Digital Prints. Also Maintain and Troubleshoot
+                        Printers.
                       </p>
                     </div>
                   </li>
@@ -249,11 +278,11 @@ export default function AboutMe({
                 <div className="text-sm flex flex-col gap-8">
                   <div className="flex gap-2 flex-col">
                     <h4 className="-mt-2 text-slate-300">
-                      Bachelor of Science In Information Technology <br />{" "}
-                      (Mindoro State University)
+                      Complete Web Design: from Figma to Webflow
+                      <br /> (Udemy Certificate)
                     </h4>
                     <p className={`${showTextAccent} text-sm leading-6`}>
-                      2015 - 2020
+                      May 06, 2024
                     </p>
                   </div>
                   <div className="flex gap-2 flex-col">
@@ -262,7 +291,16 @@ export default function AboutMe({
                       <br /> (1st Place)
                     </h4>
                     <p className={`${showTextAccent} text-sm leading-6`}>
-                      January 2023
+                      January 2023 | June 2023
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-col">
+                    <h4 className="-mt-2 text-slate-300">
+                      Bachelor of Science In Information Technology <br />{" "}
+                      (Mindoro State University)
+                    </h4>
+                    <p className={`${showTextAccent} text-sm leading-6`}>
+                      2015 - 2020
                     </p>
                   </div>
                 </div>

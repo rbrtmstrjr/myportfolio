@@ -243,7 +243,10 @@ export default function App() {
             <div
               className={`text-darkGray hover:cursor-pointer flex items-center gap-6 text-xs`}
             >
-              <a href="./images/resume_maestro_robert.pdf" target="_blank">
+              <a
+                href="./images/resume_maestro_robert_download.pdf"
+                target="_blank"
+              >
                 <h1 className={`select-none ${showHoverTextAccent}`}>Resume</h1>
               </a>
               <h1
