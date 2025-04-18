@@ -603,7 +603,7 @@ export default function App() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="text-slate-300 font-bold">
-              Robert Maestro Jr. | Portfolio 2024
+              Robert Maestro Jr. | Portfolio 2025
             </h3>
             <p className="text-sm text-darkGray leading-6">
               Made With Pure Hardwork And Love.
